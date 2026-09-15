@@ -1,0 +1,5618 @@
+{
+  "updated": "2026-09-15",
+  "nodes": [
+    {
+      "id": "ai",
+      "parent": null,
+      "label": "Intelligence artificielle",
+      "kind": "racine",
+      "summary": "Étudier et construire des systèmes capables de percevoir, apprendre, raisonner ou agir pour atteindre un objectif.",
+      "use": "Relier les capacités techniques aux usages et aux décisions d’architecture.",
+      "caution": "Cette cartographie est une organisation pédagogique : les domaines se recoupent et ne constituent pas une taxonomie universelle.",
+      "sources": [
+        "ai",
+        "nist"
+      ],
+      "tags": [
+        "AI",
+        "IA",
+        "artificial intelligence"
+      ],
+      "color": "#7765c8",
+      "level": 0,
+      "domain": "ai"
+    },
+    {
+      "id": "symbolic",
+      "parent": "ai",
+      "label": "Fondements & raisonnement",
+      "kind": "domaine",
+      "summary": "Logique, recherche, probabilités et représentation structurée pour expliquer et résoudre des problèmes.",
+      "use": "Formaliser des règles métier et des décisions.",
+      "caution": "Un raisonnement formel dépend de la qualité des hypothèses.",
+      "sources": [
+        "ai"
+      ],
+      "tags": [
+        "symbolic AI",
+        "GOFAI",
+        "IA symbolique"
+      ],
+      "color": "#8c769b",
+      "level": 1,
+      "domain": "symbolic"
+    },
+    {
+      "id": "ml",
+      "parent": "ai",
+      "label": "Machine learning",
+      "kind": "domaine",
+      "summary": "Apprendre des régularités à partir de données pour prédire, regrouper ou décider.",
+      "use": "Scoring, prévision et détection de comportements inhabituels.",
+      "caution": "Une bonne performance historique ne garantit pas la performance future.",
+      "sources": [
+        "sk",
+        "rl"
+      ],
+      "tags": [
+        "ML",
+        "apprentissage automatique"
+      ],
+      "color": "#5a8b74",
+      "level": 1,
+      "domain": "ml"
+    },
+    {
+      "id": "dl",
+      "parent": "ai",
+      "label": "Deep learning",
+      "kind": "domaine",
+      "summary": "Utiliser des réseaux neuronaux à plusieurs niveaux pour apprendre des représentations.",
+      "use": "Traiter des signaux complexes ou de grands corpus.",
+      "caution": "Besoin de données, de calcul et d’une évaluation adaptée.",
+      "sources": [
+        "torch",
+        "attention"
+      ],
+      "tags": [
+        "DL",
+        "apprentissage profond",
+        "neural"
+      ],
+      "color": "#6d83b8",
+      "level": 1,
+      "domain": "dl"
+    },
+    {
+      "id": "nlp",
+      "parent": "ai",
+      "label": "Langage & parole",
+      "kind": "domaine",
+      "summary": "Analyser ou produire du langage écrit et des signaux de parole.",
+      "use": "Comprendre des documents et des interactions vocales.",
+      "caution": "Les langues, accents et contextes modifient les performances.",
+      "sources": [
+        "hf"
+      ],
+      "tags": [
+        "NLP",
+        "TAL",
+        "language",
+        "speech"
+      ],
+      "color": "#b88756",
+      "level": 1,
+      "domain": "nlp"
+    },
+    {
+      "id": "vision",
+      "parent": "ai",
+      "label": "Vision & multimodalité",
+      "kind": "domaine",
+      "summary": "Interpréter les images et combiner plusieurs modalités d’information.",
+      "use": "Inspection, compréhension de documents et interfaces multimodales.",
+      "caution": "La perception reste sensible aux conditions de capture.",
+      "sources": [
+        "hf",
+        "torch"
+      ],
+      "tags": [
+        "computer vision",
+        "CV",
+        "multimodal"
+      ],
+      "color": "#6697a6",
+      "level": 1,
+      "domain": "vision"
+    },
+    {
+      "id": "gen",
+      "parent": "ai",
+      "label": "IA générative",
+      "kind": "domaine",
+      "summary": "Produire du texte, des images, du code ou d’autres contenus à partir de distributions apprises.",
+      "use": "Assistants, création et synthèse documentaire.",
+      "caution": "Un contenu plausible peut être faux ou inadapté.",
+      "sources": [
+        "hf",
+        "diffusers"
+      ],
+      "tags": [
+        "GenAI",
+        "generative AI"
+      ],
+      "color": "#8b68b5",
+      "level": 1,
+      "domain": "gen"
+    },
+    {
+      "id": "agents",
+      "parent": "ai",
+      "label": "Agents & systèmes autonomes",
+      "kind": "domaine",
+      "summary": "Combiner perception, décision, outils et actions pour poursuivre un objectif.",
+      "use": "Orchestrer des tâches et contrôler des systèmes.",
+      "caution": "L’autonomie doit être bornée par les permissions et le contrôle humain.",
+      "sources": [
+        "ai",
+        "mcp"
+      ],
+      "tags": [
+        "agentic AI",
+        "robotics",
+        "robotique"
+      ],
+      "color": "#bb7976",
+      "level": 1,
+      "domain": "agents"
+    },
+    {
+      "id": "data",
+      "parent": "ai",
+      "label": "Données & connaissances",
+      "kind": "domaine",
+      "summary": "Préparer, représenter et retrouver l’information qui alimente les systèmes IA.",
+      "use": "Construire un socle de données fiable et accessible.",
+      "caution": "La qualité, la provenance et les droits d’accès restent déterminants.",
+      "sources": [
+        "sk",
+        "rdf",
+        "rag"
+      ],
+      "tags": [
+        "knowledge",
+        "data engineering"
+      ],
+      "color": "#829456",
+      "level": 1,
+      "domain": "data"
+    },
+    {
+      "id": "ops",
+      "parent": "ai",
+      "label": "Ingénierie & plateformes",
+      "kind": "domaine",
+      "summary": "Industrialiser l’entraînement, l’inférence et l’exploitation des systèmes IA.",
+      "use": "Passer d’un prototype à un service suivi en production.",
+      "caution": "Coûts, latence et exploitation doivent être mesurés ensemble.",
+      "sources": [
+        "mlflow",
+        "vllm",
+        "torch"
+      ],
+      "tags": [
+        "MLOps",
+        "LLMOps",
+        "AI engineering"
+      ],
+      "color": "#748a9b",
+      "level": 1,
+      "domain": "ops"
+    },
+    {
+      "id": "trust",
+      "parent": "ai",
+      "label": "Évaluation & gouvernance",
+      "kind": "domaine",
+      "summary": "Évaluer les résultats et piloter les risques, responsabilités et contrôles.",
+      "use": "Définir les critères d’acceptation et suivre les usages.",
+      "caution": "Les contrôles doivent correspondre au contexte réel d’utilisation.",
+      "sources": [
+        "nist",
+        "owasp",
+        "metrics"
+      ],
+      "tags": [
+        "AI governance",
+        "responsible AI",
+        "trustworthy AI"
+      ],
+      "color": "#9a8a65",
+      "level": 1,
+      "domain": "trust"
+    },
+    {
+      "id": "logic",
+      "parent": "symbolic",
+      "label": "Logique & règles",
+      "kind": "sous-domaine",
+      "summary": "Représenter des faits et déduire des conséquences suivant des règles explicites.",
+      "use": "Décisions métier traçables.",
+      "caution": "Une base de règles peut devenir difficile à maintenir.",
+      "sources": [
+        "ai"
+      ],
+      "tags": [],
+      "color": "#8c769b",
+      "level": 2,
+      "domain": "symbolic"
+    },
+    {
+      "id": "expert",
+      "parent": "logic",
+      "label": "Systèmes experts",
+      "kind": "méthode",
+      "summary": "Moteur d’inférence appliquant une base de connaissances et de règles.",
+      "use": "Diagnostic assisté dans un domaine limité.",
+      "caution": "La couverture dépend des connaissances encodées.",
+      "sources": [
+        "ai"
+      ],
+      "tags": [
+        "expert systems"
+      ],
+      "color": "#8c769b",
+      "level": 3,
+      "domain": "symbolic"
+    },
+    {
+      "id": "fuzzy",
+      "parent": "logic",
+      "label": "Logique floue",
+      "kind": "méthode",
+      "summary": "Raisonner avec des degrés d’appartenance plutôt que des catégories strictement binaires.",
+      "use": "Contrôle avec critères graduels.",
+      "caution": "Les fonctions d’appartenance nécessitent une justification métier.",
+      "sources": [
+        "ai"
+      ],
+      "tags": [
+        "fuzzy logic"
+      ],
+      "color": "#8c769b",
+      "level": 3,
+      "domain": "symbolic"
+    },
+    {
+      "id": "constraints",
+      "parent": "logic",
+      "label": "Contraintes & solveurs",
+      "kind": "méthode",
+      "summary": "Trouver des affectations satisfaisant des contraintes formalisées.",
+      "use": "Planification de ressources.",
+      "caution": "Le temps de résolution dépend de la difficulté du problème.",
+      "sources": [
+        "ai"
+      ],
+      "tags": [
+        "CSP",
+        "SAT",
+        "SMT"
+      ],
+      "color": "#8c769b",
+      "level": 3,
+      "domain": "symbolic"
+    },
+    {
+      "id": "search",
+      "parent": "symbolic",
+      "label": "Recherche & planification",
+      "kind": "sous-domaine",
+      "summary": "Explorer des états et des séquences d’actions possibles.",
+      "use": "Trouver une route ou un plan faisable.",
+      "caution": "L’espace des possibilités peut croître très rapidement.",
+      "sources": [
+        "ai"
+      ],
+      "tags": [],
+      "color": "#8c769b",
+      "level": 2,
+      "domain": "symbolic"
+    },
+    {
+      "id": "astar",
+      "parent": "search",
+      "label": "Recherche A*",
+      "kind": "méthode",
+      "summary": "Combiner un coût déjà parcouru et une estimation du coût restant.",
+      "use": "Recherche de chemin.",
+      "caution": "Les garanties dépendent des propriétés de l’heuristique.",
+      "sources": [
+        "ai"
+      ],
+      "tags": [
+        "A star",
+        "A-star"
+      ],
+      "color": "#8c769b",
+      "level": 3,
+      "domain": "symbolic"
+    },
+    {
+      "id": "planning",
+      "parent": "search",
+      "label": "Planification automatique",
+      "kind": "méthode",
+      "summary": "Construire une séquence d’actions à partir de préconditions et d’effets.",
+      "use": "Orchestration sous contraintes.",
+      "caution": "Un modèle incomplet des effets produit des plans fragiles.",
+      "sources": [
+        "ai"
+      ],
+      "tags": [
+        "automated planning"
+      ],
+      "color": "#8c769b",
+      "level": 3,
+      "domain": "symbolic"
+    },
+    {
+      "id": "optimization",
+      "parent": "search",
+      "label": "Optimisation combinatoire",
+      "kind": "méthode",
+      "summary": "Choisir la meilleure solution parmi un ensemble discret sous contraintes.",
+      "use": "Affectation et ordonnancement.",
+      "caution": "Une heuristique ne garantit pas toujours l’optimum.",
+      "sources": [
+        "ai"
+      ],
+      "tags": [],
+      "color": "#8c769b",
+      "level": 3,
+      "domain": "symbolic"
+    },
+    {
+      "id": "uncertainty",
+      "parent": "symbolic",
+      "label": "Incertitude & causalité",
+      "kind": "sous-domaine",
+      "summary": "Exprimer ce qui est inconnu et distinguer associations et effets causaux.",
+      "use": "Décision lorsque l’information est partielle.",
+      "caution": "La corrélation ne suffit pas à établir un effet causal.",
+      "sources": [
+        "ai"
+      ],
+      "tags": [],
+      "color": "#8c769b",
+      "level": 2,
+      "domain": "symbolic"
+    },
+    {
+      "id": "bayes",
+      "parent": "uncertainty",
+      "label": "Réseaux bayésiens",
+      "kind": "méthode",
+      "summary": "Représenter des dépendances probabilistes dans un graphe orienté acyclique.",
+      "use": "Diagnostic probabiliste.",
+      "caution": "La structure et les probabilités doivent être validées.",
+      "sources": [
+        "ai"
+      ],
+      "tags": [
+        "Bayesian networks"
+      ],
+      "color": "#8c769b",
+      "level": 3,
+      "domain": "symbolic"
+    },
+    {
+      "id": "causal",
+      "parent": "uncertainty",
+      "label": "Inférence causale",
+      "kind": "méthode",
+      "summary": "Estimer l’effet d’une intervention avec des hypothèses explicites.",
+      "use": "Mesurer l’impact d’une décision.",
+      "caution": "Les facteurs confondants peuvent invalider une conclusion.",
+      "sources": [
+        "ai"
+      ],
+      "tags": [
+        "causal inference"
+      ],
+      "color": "#8c769b",
+      "level": 3,
+      "domain": "symbolic"
+    },
+    {
+      "id": "neurosymbolic",
+      "parent": "uncertainty",
+      "label": "IA neuro-symbolique",
+      "kind": "approche",
+      "summary": "Associer apprentissage neuronal et contraintes ou représentations symboliques.",
+      "use": "Combiner extraction et règles vérifiables.",
+      "caution": "Les bénéfices dépendent du mécanisme concret d’intégration.",
+      "sources": [
+        "ai",
+        "torch"
+      ],
+      "tags": [
+        "neuro-symbolic AI"
+      ],
+      "color": "#8c769b",
+      "level": 3,
+      "domain": "symbolic"
+    },
+    {
+      "id": "supervised",
+      "parent": "ml",
+      "label": "Apprentissage supervisé",
+      "kind": "sous-domaine",
+      "summary": "Apprendre un lien entre observations et cibles connues.",
+      "use": "Prédire une classe ou une valeur.",
+      "caution": "Les étiquettes et le découpage des données conditionnent la validité.",
+      "sources": [
+        "sk"
+      ],
+      "tags": [],
+      "color": "#5a8b74",
+      "level": 2,
+      "domain": "ml"
+    },
+    {
+      "id": "classification",
+      "parent": "supervised",
+      "label": "Classification",
+      "kind": "méthode",
+      "summary": "Prédire une catégorie à partir de variables d’entrée.",
+      "use": "Orientation des demandes.",
+      "caution": "Choisir des métriques adaptées aux classes déséquilibrées.",
+      "sources": [
+        "sk",
+        "metrics"
+      ],
+      "tags": [],
+      "color": "#5a8b74",
+      "level": 3,
+      "domain": "ml"
+    },
+    {
+      "id": "regression",
+      "parent": "supervised",
+      "label": "Régression",
+      "kind": "méthode",
+      "summary": "Estimer une valeur numérique à partir de variables d’entrée.",
+      "use": "Prévision de volumes.",
+      "caution": "L’extrapolation hors des données peut être fragile.",
+      "sources": [
+        "sk"
+      ],
+      "tags": [],
+      "color": "#5a8b74",
+      "level": 3,
+      "domain": "ml"
+    },
+    {
+      "id": "trees",
+      "parent": "supervised",
+      "label": "Arbres de décision",
+      "kind": "méthode",
+      "summary": "Partitionner les observations par une succession de tests.",
+      "use": "Règles de décision lisibles.",
+      "caution": "Des arbres profonds peuvent surapprendre.",
+      "sources": [
+        "sk"
+      ],
+      "tags": [
+        "decision tree"
+      ],
+      "color": "#5a8b74",
+      "level": 3,
+      "domain": "ml"
+    },
+    {
+      "id": "forest",
+      "parent": "supervised",
+      "label": "Random forests",
+      "kind": "méthode",
+      "summary": "Agréger des arbres entraînés avec de la diversité dans les données et variables.",
+      "use": "Prédictions sur données tabulaires.",
+      "caution": "Un ensemble est moins directement lisible qu’un arbre.",
+      "sources": [
+        "ensemble"
+      ],
+      "tags": [
+        "forêts aléatoires"
+      ],
+      "color": "#5a8b74",
+      "level": 3,
+      "domain": "ml"
+    },
+    {
+      "id": "boosting",
+      "parent": "supervised",
+      "label": "Gradient boosting",
+      "kind": "méthode",
+      "summary": "Construire progressivement un ensemble corrigeant les erreurs précédentes.",
+      "use": "Scoring sur données tabulaires.",
+      "caution": "Le réglage et la validation restent essentiels.",
+      "sources": [
+        "ensemble"
+      ],
+      "tags": [
+        "GBDT",
+        "XGBoost",
+        "LightGBM",
+        "CatBoost"
+      ],
+      "color": "#5a8b74",
+      "level": 3,
+      "domain": "ml"
+    },
+    {
+      "id": "svm",
+      "parent": "supervised",
+      "label": "Machines à vecteurs de support",
+      "kind": "méthode",
+      "summary": "Apprendre une séparation avec marge, éventuellement à l’aide d’un noyau.",
+      "use": "Classification avec représentations structurées.",
+      "caution": "Le choix du noyau et le passage à l’échelle demandent attention.",
+      "sources": [
+        "sk"
+      ],
+      "tags": [
+        "SVM",
+        "support vector machine"
+      ],
+      "color": "#5a8b74",
+      "level": 3,
+      "domain": "ml"
+    },
+    {
+      "id": "unsupervised",
+      "parent": "ml",
+      "label": "Apprentissage non supervisé",
+      "kind": "sous-domaine",
+      "summary": "Découvrir une structure sans cible étiquetée.",
+      "use": "Explorer des populations et des représentations.",
+      "caution": "Une structure statistique n’est pas automatiquement pertinente métier.",
+      "sources": [
+        "sk",
+        "cluster"
+      ],
+      "tags": [],
+      "color": "#5a8b74",
+      "level": 2,
+      "domain": "ml"
+    },
+    {
+      "id": "clustering",
+      "parent": "unsupervised",
+      "label": "Clustering",
+      "kind": "méthode",
+      "summary": "Regrouper des observations selon une notion de similarité.",
+      "use": "Segmentation exploratoire.",
+      "caution": "Le résultat dépend de la distance et des paramètres.",
+      "sources": [
+        "cluster"
+      ],
+      "tags": [
+        "K-means",
+        "DBSCAN",
+        "HDBSCAN"
+      ],
+      "color": "#5a8b74",
+      "level": 3,
+      "domain": "ml"
+    },
+    {
+      "id": "pca",
+      "parent": "unsupervised",
+      "label": "Réduction de dimension",
+      "kind": "méthode",
+      "summary": "Projeter les données dans un espace de moindre dimension.",
+      "use": "Compression et visualisation.",
+      "caution": "Une projection peut perdre des informations utiles.",
+      "sources": [
+        "sk"
+      ],
+      "tags": [
+        "PCA",
+        "UMAP",
+        "t-SNE"
+      ],
+      "color": "#5a8b74",
+      "level": 3,
+      "domain": "ml"
+    },
+    {
+      "id": "anomaly",
+      "parent": "unsupervised",
+      "label": "Détection d’anomalies",
+      "kind": "méthode",
+      "summary": "Repérer des observations éloignées d’un comportement de référence.",
+      "use": "Alertes et surveillance.",
+      "caution": "Une anomalie ne prouve pas une fraude.",
+      "sources": [
+        "sk"
+      ],
+      "tags": [
+        "outlier",
+        "isolation forest"
+      ],
+      "color": "#5a8b74",
+      "level": 3,
+      "domain": "ml"
+    },
+    {
+      "id": "paradigms",
+      "parent": "ml",
+      "label": "Autres régimes d’apprentissage",
+      "kind": "sous-domaine",
+      "summary": "Exploiter différents types de supervision et modes d’accès aux données.",
+      "use": "Adapter l’apprentissage aux données disponibles.",
+      "caution": "Le régime doit correspondre aux contraintes opérationnelles.",
+      "sources": [
+        "sk",
+        "rl"
+      ],
+      "tags": [],
+      "color": "#5a8b74",
+      "level": 2,
+      "domain": "ml"
+    },
+    {
+      "id": "semi",
+      "parent": "paradigms",
+      "label": "Semi-supervisé",
+      "kind": "méthode",
+      "summary": "Combiner un petit ensemble étiqueté et des données non étiquetées.",
+      "use": "Réduire l’effort d’annotation.",
+      "caution": "De mauvaises pseudo-étiquettes peuvent amplifier les erreurs.",
+      "sources": [
+        "sk"
+      ],
+      "tags": [],
+      "color": "#5a8b74",
+      "level": 3,
+      "domain": "ml"
+    },
+    {
+      "id": "self",
+      "parent": "paradigms",
+      "label": "Auto-supervisé",
+      "kind": "méthode",
+      "summary": "Créer un signal d’apprentissage à partir de la structure des données elles-mêmes.",
+      "use": "Préapprendre des représentations.",
+      "caution": "L’objectif de préapprentissage peut différer de l’usage final.",
+      "sources": [
+        "hf"
+      ],
+      "tags": [
+        "self-supervised"
+      ],
+      "color": "#5a8b74",
+      "level": 3,
+      "domain": "ml"
+    },
+    {
+      "id": "transfer",
+      "parent": "paradigms",
+      "label": "Apprentissage par transfert",
+      "kind": "méthode",
+      "summary": "Réutiliser des représentations ou paramètres appris pour une autre tâche.",
+      "use": "Adapter un modèle avec moins de données.",
+      "caution": "Un domaine trop différent peut limiter le transfert.",
+      "sources": [
+        "torch",
+        "hf"
+      ],
+      "tags": [
+        "transfer learning"
+      ],
+      "color": "#5a8b74",
+      "level": 3,
+      "domain": "ml"
+    },
+    {
+      "id": "rl",
+      "parent": "paradigms",
+      "label": "Apprentissage par renforcement",
+      "kind": "méthode",
+      "summary": "Apprendre une politique d’action pour maximiser une récompense cumulée.",
+      "use": "Décisions séquentielles.",
+      "caution": "Une récompense mal définie favorise des comportements indésirables.",
+      "sources": [
+        "rl"
+      ],
+      "tags": [
+        "reinforcement learning",
+        "RL"
+      ],
+      "color": "#5a8b74",
+      "level": 3,
+      "domain": "ml"
+    },
+    {
+      "id": "qlearning",
+      "parent": "rl",
+      "label": "Q-learning & DQN",
+      "kind": "méthode",
+      "summary": "Estimer la valeur d’une action dans un état pour choisir une politique.",
+      "use": "Contrôle dans un environnement discret.",
+      "caution": "Stabilité et exploration nécessitent une évaluation.",
+      "sources": [
+        "rl",
+        "torch"
+      ],
+      "tags": [],
+      "color": "#5a8b74",
+      "level": 4,
+      "domain": "ml"
+    },
+    {
+      "id": "ppo",
+      "parent": "rl",
+      "label": "Policy gradients & PPO",
+      "kind": "méthode",
+      "summary": "Optimiser directement une politique avec des mises à jour contrôlées.",
+      "use": "Entraîner des comportements séquentiels.",
+      "caution": "L’apprentissage peut consommer de nombreuses interactions.",
+      "sources": [
+        "rl"
+      ],
+      "tags": [
+        "actor-critic"
+      ],
+      "color": "#5a8b74",
+      "level": 4,
+      "domain": "ml"
+    },
+    {
+      "id": "neural",
+      "parent": "dl",
+      "label": "Réseaux neuronaux",
+      "kind": "sous-domaine",
+      "summary": "Composer des couches paramétrées ajustées par entraînement.",
+      "use": "Apprendre des transformations non linéaires.",
+      "caution": "L’architecture et les données déterminent le comportement.",
+      "sources": [
+        "torch"
+      ],
+      "tags": [],
+      "color": "#6d83b8",
+      "level": 2,
+      "domain": "dl"
+    },
+    {
+      "id": "mlp",
+      "parent": "neural",
+      "label": "Perceptron multicouche",
+      "kind": "méthode",
+      "summary": "Empiler des couches de neurones connectées avec fonctions d’activation.",
+      "use": "Modélisation non linéaire.",
+      "caution": "Il n’exploite pas explicitement toutes les structures des signaux.",
+      "sources": [
+        "torch"
+      ],
+      "tags": [
+        "MLP"
+      ],
+      "color": "#6d83b8",
+      "level": 3,
+      "domain": "dl"
+    },
+    {
+      "id": "cnn",
+      "parent": "neural",
+      "label": "Réseaux convolutifs",
+      "kind": "méthode",
+      "summary": "Partager des filtres locaux pour traiter la structure spatiale.",
+      "use": "Reconnaissance d’images.",
+      "caution": "Les changements de domaine visuel peuvent dégrader les résultats.",
+      "sources": [
+        "torch"
+      ],
+      "tags": [
+        "CNN",
+        "convolution"
+      ],
+      "color": "#6d83b8",
+      "level": 3,
+      "domain": "dl"
+    },
+    {
+      "id": "rnn",
+      "parent": "neural",
+      "label": "Réseaux récurrents",
+      "kind": "méthode",
+      "summary": "Traiter des séquences avec un état mis à jour au fil des éléments.",
+      "use": "Séries et signaux séquentiels.",
+      "caution": "Les dépendances longues peuvent être difficiles à apprendre.",
+      "sources": [
+        "torch"
+      ],
+      "tags": [
+        "RNN",
+        "LSTM",
+        "GRU"
+      ],
+      "color": "#6d83b8",
+      "level": 3,
+      "domain": "dl"
+    },
+    {
+      "id": "gnn",
+      "parent": "neural",
+      "label": "Réseaux de neurones sur graphes",
+      "kind": "méthode",
+      "summary": "Propager et agréger des informations selon des relations entre nœuds.",
+      "use": "Analyse de réseaux.",
+      "caution": "La qualité des relations du graphe est déterminante.",
+      "sources": [
+        "pyg"
+      ],
+      "tags": [
+        "GNN",
+        "graph neural network"
+      ],
+      "color": "#6d83b8",
+      "level": 3,
+      "domain": "dl"
+    },
+    {
+      "id": "transformers",
+      "parent": "dl",
+      "label": "Transformers & attention",
+      "kind": "sous-domaine",
+      "summary": "Modéliser les interactions entre éléments avec des mécanismes d’attention.",
+      "use": "Langage, vision et signaux multimodaux.",
+      "caution": "Le coût augmente avec les séquences et le modèle.",
+      "sources": [
+        "attention",
+        "hf"
+      ],
+      "tags": [],
+      "color": "#6d83b8",
+      "level": 2,
+      "domain": "dl"
+    },
+    {
+      "id": "attention",
+      "parent": "transformers",
+      "label": "Auto-attention",
+      "kind": "méthode",
+      "summary": "Pondérer les relations entre éléments d’une même séquence.",
+      "use": "Représentations dépendantes du contexte.",
+      "caution": "Les poids d’attention ne constituent pas une explication complète.",
+      "sources": [
+        "attention"
+      ],
+      "tags": [
+        "self-attention"
+      ],
+      "color": "#6d83b8",
+      "level": 3,
+      "domain": "dl"
+    },
+    {
+      "id": "encoder",
+      "parent": "transformers",
+      "label": "Encodeur / décodeur",
+      "kind": "méthode",
+      "summary": "Encoder une entrée, produire une sortie, ou combiner les deux structures.",
+      "use": "Choisir une architecture adaptée à la tâche.",
+      "caution": "Ces familles ne sont pas interchangeables pour tous les usages.",
+      "sources": [
+        "attention",
+        "hf"
+      ],
+      "tags": [
+        "BERT",
+        "GPT",
+        "T5"
+      ],
+      "color": "#6d83b8",
+      "level": 3,
+      "domain": "dl"
+    },
+    {
+      "id": "moe",
+      "parent": "transformers",
+      "label": "Mixture of Experts",
+      "kind": "architecture",
+      "summary": "Router chaque entrée vers une partie d’un ensemble d’experts neuronaux.",
+      "use": "Augmenter la capacité avec activation sélective.",
+      "caution": "Le routage et la distribution compliquent l’exploitation.",
+      "sources": [
+        "hf"
+      ],
+      "tags": [
+        "MoE"
+      ],
+      "color": "#6d83b8",
+      "level": 3,
+      "domain": "dl"
+    },
+    {
+      "id": "training",
+      "parent": "dl",
+      "label": "Entraînement & représentations",
+      "kind": "sous-domaine",
+      "summary": "Ajuster les paramètres et apprendre des espaces de caractéristiques utiles.",
+      "use": "Construire un modèle qui généralise.",
+      "caution": "Optimiser la perte d’entraînement ne suffit pas.",
+      "sources": [
+        "torch"
+      ],
+      "tags": [],
+      "color": "#6d83b8",
+      "level": 2,
+      "domain": "dl"
+    },
+    {
+      "id": "backprop",
+      "parent": "training",
+      "label": "Rétropropagation",
+      "kind": "méthode",
+      "summary": "Calculer des gradients par la règle de chaîne pour ajuster les paramètres.",
+      "use": "Entraînement différentiable.",
+      "caution": "Les gradients peuvent devenir instables.",
+      "sources": [
+        "torch"
+      ],
+      "tags": [
+        "backpropagation",
+        "autograd"
+      ],
+      "color": "#6d83b8",
+      "level": 3,
+      "domain": "dl"
+    },
+    {
+      "id": "regularization",
+      "parent": "training",
+      "label": "Régularisation",
+      "kind": "méthode",
+      "summary": "Limiter la complexité effective pour améliorer la généralisation.",
+      "use": "Réduire le surapprentissage.",
+      "caution": "Un excès de régularisation peut dégrader l’apprentissage.",
+      "sources": [
+        "torch",
+        "sk"
+      ],
+      "tags": [
+        "dropout",
+        "weight decay"
+      ],
+      "color": "#6d83b8",
+      "level": 3,
+      "domain": "dl"
+    },
+    {
+      "id": "embedding",
+      "parent": "training",
+      "label": "Embeddings",
+      "kind": "méthode",
+      "summary": "Représenter des objets dans un espace vectoriel appris.",
+      "use": "Similarité sémantique et recherche.",
+      "caution": "La proximité vectorielle dépend du modèle et du domaine.",
+      "sources": [
+        "hf",
+        "rag"
+      ],
+      "tags": [
+        "vector representation",
+        "plongements"
+      ],
+      "color": "#6d83b8",
+      "level": 3,
+      "domain": "dl"
+    },
+    {
+      "id": "text",
+      "parent": "nlp",
+      "label": "Compréhension du texte",
+      "kind": "sous-domaine",
+      "summary": "Extraire ou analyser des informations présentes dans des textes.",
+      "use": "Structuration documentaire.",
+      "caution": "Le contexte et les ambiguïtés linguistiques restent importants.",
+      "sources": [
+        "hf"
+      ],
+      "tags": [],
+      "color": "#b88756",
+      "level": 2,
+      "domain": "nlp"
+    },
+    {
+      "id": "token",
+      "parent": "text",
+      "label": "Tokenisation",
+      "kind": "méthode",
+      "summary": "Découper un texte en unités manipulables par un modèle.",
+      "use": "Préparer les entrées de langage.",
+      "caution": "Un token n’est pas toujours un mot.",
+      "sources": [
+        "hf"
+      ],
+      "tags": [
+        "tokenizer",
+        "BPE"
+      ],
+      "color": "#b88756",
+      "level": 3,
+      "domain": "nlp"
+    },
+    {
+      "id": "ner",
+      "parent": "text",
+      "label": "Entités nommées",
+      "kind": "méthode",
+      "summary": "Repérer et classer des mentions comme personnes, organisations ou lieux.",
+      "use": "Extraction documentaire.",
+      "caution": "Les entités métier exigent souvent des adaptations.",
+      "sources": [
+        "hf"
+      ],
+      "tags": [
+        "NER",
+        "named entity recognition"
+      ],
+      "color": "#b88756",
+      "level": 3,
+      "domain": "nlp"
+    },
+    {
+      "id": "sentiment",
+      "parent": "text",
+      "label": "Analyse de sentiment",
+      "kind": "méthode",
+      "summary": "Estimer une tonalité ou une opinion dans un texte.",
+      "use": "Analyse de retours.",
+      "caution": "Ironie et contexte peuvent inverser l’interprétation.",
+      "sources": [
+        "hf"
+      ],
+      "tags": [],
+      "color": "#b88756",
+      "level": 3,
+      "domain": "nlp"
+    },
+    {
+      "id": "translation",
+      "parent": "text",
+      "label": "Traduction automatique",
+      "kind": "méthode",
+      "summary": "Transformer un texte d’une langue vers une autre.",
+      "use": "Documents multilingues.",
+      "caution": "La terminologie spécialisée nécessite une vérification.",
+      "sources": [
+        "hf"
+      ],
+      "tags": [],
+      "color": "#b88756",
+      "level": 3,
+      "domain": "nlp"
+    },
+    {
+      "id": "speech",
+      "parent": "nlp",
+      "label": "Parole & audio",
+      "kind": "sous-domaine",
+      "summary": "Relier signaux audio, texte et représentations sonores.",
+      "use": "Interactions vocales.",
+      "caution": "Bruit et accents influencent la qualité.",
+      "sources": [
+        "hf"
+      ],
+      "tags": [],
+      "color": "#b88756",
+      "level": 2,
+      "domain": "nlp"
+    },
+    {
+      "id": "asr",
+      "parent": "speech",
+      "label": "Reconnaissance vocale",
+      "kind": "méthode",
+      "summary": "Transcrire un signal de parole en texte.",
+      "use": "Compte rendu assisté.",
+      "caution": "Vérifier les noms propres et les chiffres.",
+      "sources": [
+        "hf"
+      ],
+      "tags": [
+        "ASR",
+        "speech to text",
+        "STT"
+      ],
+      "color": "#b88756",
+      "level": 3,
+      "domain": "nlp"
+    },
+    {
+      "id": "tts",
+      "parent": "speech",
+      "label": "Synthèse vocale",
+      "kind": "méthode",
+      "summary": "Produire de la parole à partir d’un texte ou d’une représentation.",
+      "use": "Lecture et interfaces vocales.",
+      "caution": "Consentement et prévention de l’usurpation sont essentiels.",
+      "sources": [
+        "hf"
+      ],
+      "tags": [
+        "TTS",
+        "text to speech"
+      ],
+      "color": "#b88756",
+      "level": 3,
+      "domain": "nlp"
+    },
+    {
+      "id": "audio",
+      "parent": "speech",
+      "label": "Classification audio",
+      "kind": "méthode",
+      "summary": "Associer une catégorie à un segment sonore.",
+      "use": "Détection d’événements acoustiques.",
+      "caution": "L’environnement sonore modifie la distribution des données.",
+      "sources": [
+        "hf"
+      ],
+      "tags": [],
+      "color": "#b88756",
+      "level": 3,
+      "domain": "nlp"
+    },
+    {
+      "id": "perception",
+      "parent": "vision",
+      "label": "Perception visuelle",
+      "kind": "sous-domaine",
+      "summary": "Localiser, reconnaître et segmenter des éléments d’une image.",
+      "use": "Inspection et analyse de scènes.",
+      "caution": "Valider dans les conditions réelles de capture.",
+      "sources": [
+        "hf",
+        "torch"
+      ],
+      "tags": [],
+      "color": "#6697a6",
+      "level": 2,
+      "domain": "vision"
+    },
+    {
+      "id": "imageclass",
+      "parent": "perception",
+      "label": "Classification d’images",
+      "kind": "méthode",
+      "summary": "Attribuer une catégorie à une image.",
+      "use": "Tri visuel.",
+      "caution": "Une catégorie globale ne localise pas l’objet.",
+      "sources": [
+        "hf",
+        "torch"
+      ],
+      "tags": [],
+      "color": "#6697a6",
+      "level": 3,
+      "domain": "vision"
+    },
+    {
+      "id": "detection",
+      "parent": "perception",
+      "label": "Détection d’objets",
+      "kind": "méthode",
+      "summary": "Localiser des objets et prédire leur catégorie.",
+      "use": "Comptage et inspection.",
+      "caution": "Occlusion et objets petits posent des difficultés.",
+      "sources": [
+        "hf",
+        "torch"
+      ],
+      "tags": [
+        "object detection",
+        "YOLO"
+      ],
+      "color": "#6697a6",
+      "level": 3,
+      "domain": "vision"
+    },
+    {
+      "id": "segmentation",
+      "parent": "perception",
+      "label": "Segmentation",
+      "kind": "méthode",
+      "summary": "Attribuer des catégories ou instances à des pixels.",
+      "use": "Délimitation de zones visuelles.",
+      "caution": "La précision des contours doit être mesurée.",
+      "sources": [
+        "hf"
+      ],
+      "tags": [
+        "SAM",
+        "image segmentation"
+      ],
+      "color": "#6697a6",
+      "level": 3,
+      "domain": "vision"
+    },
+    {
+      "id": "ocr",
+      "parent": "perception",
+      "label": "Lecture de documents & OCR",
+      "kind": "méthode",
+      "summary": "Reconnaître du texte et exploiter la structure d’un document visuel.",
+      "use": "Numérisation et extraction.",
+      "caution": "Les scans et tableaux complexes exigent une validation.",
+      "sources": [
+        "hf"
+      ],
+      "tags": [
+        "optical character recognition"
+      ],
+      "color": "#6697a6",
+      "level": 3,
+      "domain": "vision"
+    },
+    {
+      "id": "multimodal",
+      "parent": "vision",
+      "label": "Apprentissage multimodal",
+      "kind": "sous-domaine",
+      "summary": "Aligner et combiner des informations de plusieurs modalités.",
+      "use": "Compréhension texte-image-audio.",
+      "caution": "Une modalité peut dominer ou contredire les autres.",
+      "sources": [
+        "hf"
+      ],
+      "tags": [],
+      "color": "#6697a6",
+      "level": 2,
+      "domain": "vision"
+    },
+    {
+      "id": "vlm",
+      "parent": "multimodal",
+      "label": "Modèles vision-langage",
+      "kind": "méthode",
+      "summary": "Associer compréhension d’image et traitement du langage.",
+      "use": "Questions sur des images et documents.",
+      "caution": "Une description peut contenir des détails inventés.",
+      "sources": [
+        "hf"
+      ],
+      "tags": [
+        "VLM",
+        "vision language models"
+      ],
+      "color": "#6697a6",
+      "level": 3,
+      "domain": "vision"
+    },
+    {
+      "id": "contrastive",
+      "parent": "multimodal",
+      "label": "Apprentissage contrastif",
+      "kind": "méthode",
+      "summary": "Rapprocher des représentations correspondantes et éloigner les autres.",
+      "use": "Recherche texte-image.",
+      "caution": "Le choix des exemples positifs et négatifs influence l’espace appris.",
+      "sources": [
+        "clip"
+      ],
+      "tags": [
+        "CLIP",
+        "contrastive learning"
+      ],
+      "color": "#6697a6",
+      "level": 3,
+      "domain": "vision"
+    },
+    {
+      "id": "video",
+      "parent": "multimodal",
+      "label": "Compréhension vidéo",
+      "kind": "méthode",
+      "summary": "Analyser l’évolution d’éléments visuels au cours du temps.",
+      "use": "Reconnaissance d’activités.",
+      "caution": "L’échantillonnage peut manquer des événements courts.",
+      "sources": [
+        "hf"
+      ],
+      "tags": [],
+      "color": "#6697a6",
+      "level": 3,
+      "domain": "vision"
+    },
+    {
+      "id": "foundation",
+      "parent": "gen",
+      "label": "Modèles & génération",
+      "kind": "sous-domaine",
+      "summary": "Modèles préentraînés et mécanismes produisant de nouveaux contenus.",
+      "use": "Réutiliser une base généraliste.",
+      "caution": "Les capacités doivent être évaluées pour chaque usage.",
+      "sources": [
+        "hf",
+        "diffusers"
+      ],
+      "tags": [],
+      "color": "#8b68b5",
+      "level": 2,
+      "domain": "gen"
+    },
+    {
+      "id": "foundationmodel",
+      "parent": "foundation",
+      "label": "Modèles de fondation",
+      "kind": "approche",
+      "summary": "Modèles entraînés largement et adaptables à plusieurs tâches.",
+      "use": "Socle commun pour des applications.",
+      "caution": "Généraliste ne signifie pas fiable dans tous les domaines.",
+      "sources": [
+        "hf",
+        "nist"
+      ],
+      "tags": [
+        "foundation models"
+      ],
+      "color": "#8b68b5",
+      "level": 3,
+      "domain": "gen"
+    },
+    {
+      "id": "llm",
+      "parent": "foundation",
+      "label": "Grands modèles de langage",
+      "kind": "méthode",
+      "summary": "Modèles de langage de grande capacité apprenant des distributions de séquences.",
+      "use": "Assistant rédactionnel et documentaire.",
+      "caution": "Ils peuvent produire des affirmations non fondées.",
+      "sources": [
+        "hf",
+        "nist"
+      ],
+      "tags": [
+        "LLM",
+        "large language model"
+      ],
+      "color": "#8b68b5",
+      "level": 3,
+      "domain": "gen"
+    },
+    {
+      "id": "diffusion",
+      "parent": "foundation",
+      "label": "Modèles de diffusion",
+      "kind": "méthode",
+      "summary": "Apprendre à générer en inversant progressivement un processus de bruitage.",
+      "use": "Synthèse d’images et de signaux.",
+      "caution": "La qualité dépend du conditionnement et de l’évaluation.",
+      "sources": [
+        "diffusion",
+        "diffusers"
+      ],
+      "tags": [],
+      "color": "#8b68b5",
+      "level": 3,
+      "domain": "gen"
+    },
+    {
+      "id": "gan",
+      "parent": "foundation",
+      "label": "Réseaux antagonistes génératifs",
+      "kind": "méthode",
+      "summary": "Faire apprendre un générateur et un discriminateur en compétition.",
+      "use": "Synthèse de données visuelles.",
+      "caution": "L’entraînement peut être instable et manquer de diversité.",
+      "sources": [
+        "gan"
+      ],
+      "tags": [
+        "GAN"
+      ],
+      "color": "#8b68b5",
+      "level": 3,
+      "domain": "gen"
+    },
+    {
+      "id": "autoregressive",
+      "parent": "foundation",
+      "label": "Génération autorégressive",
+      "kind": "méthode",
+      "summary": "Produire une séquence en conditionnant chaque élément sur les précédents.",
+      "use": "Génération de texte ou de code.",
+      "caution": "Les erreurs initiales peuvent influencer la suite.",
+      "sources": [
+        "hf"
+      ],
+      "tags": [],
+      "color": "#8b68b5",
+      "level": 3,
+      "domain": "gen"
+    },
+    {
+      "id": "adaptation",
+      "parent": "gen",
+      "label": "Adaptation & alignement",
+      "kind": "sous-domaine",
+      "summary": "Ajuster un modèle et ses comportements pour un contexte d’usage.",
+      "use": "Spécialiser un assistant.",
+      "caution": "L’adaptation nécessite des critères de validation propres au contexte.",
+      "sources": [
+        "hf",
+        "lora",
+        "dpo"
+      ],
+      "tags": [],
+      "color": "#8b68b5",
+      "level": 2,
+      "domain": "gen"
+    },
+    {
+      "id": "prompt",
+      "parent": "adaptation",
+      "label": "Conception de prompts",
+      "kind": "méthode",
+      "summary": "Structurer instructions, contexte et exemples fournis au modèle.",
+      "use": "Guider une réponse.",
+      "caution": "Un prompt ne constitue pas une frontière de sécurité.",
+      "sources": [
+        "hf",
+        "owasp"
+      ],
+      "tags": [
+        "prompt engineering"
+      ],
+      "color": "#8b68b5",
+      "level": 3,
+      "domain": "gen"
+    },
+    {
+      "id": "finetune",
+      "parent": "adaptation",
+      "label": "Fine-tuning supervisé",
+      "kind": "méthode",
+      "summary": "Continuer l’entraînement sur des exemples ciblés.",
+      "use": "Adapter style et comportements.",
+      "caution": "Ne remplace pas une base documentaire à jour.",
+      "sources": [
+        "hf",
+        "lora"
+      ],
+      "tags": [
+        "SFT",
+        "supervised fine tuning"
+      ],
+      "color": "#8b68b5",
+      "level": 3,
+      "domain": "gen"
+    },
+    {
+      "id": "lora",
+      "parent": "adaptation",
+      "label": "LoRA & PEFT",
+      "kind": "méthode",
+      "summary": "Adapter un modèle avec un nombre réduit de paramètres entraînables.",
+      "use": "Réduire le coût d’adaptation.",
+      "caution": "Le gain dépend de la tâche et de la configuration.",
+      "sources": [
+        "lora",
+        "hf"
+      ],
+      "tags": [],
+      "color": "#8b68b5",
+      "level": 3,
+      "domain": "gen"
+    },
+    {
+      "id": "rlhf",
+      "parent": "adaptation",
+      "label": "RLHF",
+      "kind": "méthode",
+      "summary": "Utiliser des préférences humaines et un apprentissage par renforcement pour ajuster un modèle.",
+      "use": "Aligner le comportement sur des préférences.",
+      "caution": "Les préférences et le modèle de récompense peuvent introduire des biais.",
+      "sources": [
+        "rl",
+        "dpo"
+      ],
+      "tags": [
+        "reinforcement learning from human feedback"
+      ],
+      "color": "#8b68b5",
+      "level": 3,
+      "domain": "gen"
+    },
+    {
+      "id": "dpo",
+      "parent": "adaptation",
+      "label": "DPO",
+      "kind": "méthode",
+      "summary": "Optimiser directement le modèle à partir de paires de préférences.",
+      "use": "Ajuster sans boucle RL explicite.",
+      "caution": "La qualité des paires de préférences reste essentielle.",
+      "sources": [
+        "dpo"
+      ],
+      "tags": [
+        "direct preference optimization"
+      ],
+      "color": "#8b68b5",
+      "level": 3,
+      "domain": "gen"
+    },
+    {
+      "id": "generationapps",
+      "parent": "gen",
+      "label": "Patterns d’application",
+      "kind": "sous-domaine",
+      "summary": "Associer modèles, contexte et contrôles dans une application.",
+      "use": "Transformer la génération en service utile.",
+      "caution": "La fiabilité dépend de toute la chaîne.",
+      "sources": [
+        "rag",
+        "hf",
+        "owasp"
+      ],
+      "tags": [],
+      "color": "#8b68b5",
+      "level": 2,
+      "domain": "gen"
+    },
+    {
+      "id": "rag",
+      "parent": "generationapps",
+      "label": "Génération augmentée par recherche",
+      "kind": "architecture",
+      "summary": "Retrouver des informations externes et les fournir au générateur.",
+      "use": "Questions sur un corpus d’entreprise.",
+      "caution": "La recherche peut échouer et la génération peut mal exploiter les sources.",
+      "sources": [
+        "rag"
+      ],
+      "tags": [
+        "RAG",
+        "retrieval augmented generation"
+      ],
+      "color": "#8b68b5",
+      "level": 3,
+      "domain": "gen"
+    },
+    {
+      "id": "codegen",
+      "parent": "generationapps",
+      "label": "Génération de code",
+      "kind": "méthode",
+      "summary": "Produire ou modifier du code à partir d’un contexte et d’instructions.",
+      "use": "Assistance au développement.",
+      "caution": "Tester le code et vérifier ses dépendances et sa sécurité.",
+      "sources": [
+        "hf",
+        "owasp"
+      ],
+      "tags": [],
+      "color": "#8b68b5",
+      "level": 3,
+      "domain": "gen"
+    },
+    {
+      "id": "structured",
+      "parent": "generationapps",
+      "label": "Sorties structurées",
+      "kind": "méthode",
+      "summary": "Contraindre ou valider une sortie selon un schéma attendu.",
+      "use": "Intégration dans des processus.",
+      "caution": "La validité du format ne prouve pas celle des valeurs.",
+      "sources": [
+        "hf",
+        "mcp"
+      ],
+      "tags": [
+        "JSON",
+        "schema"
+      ],
+      "color": "#8b68b5",
+      "level": 3,
+      "domain": "gen"
+    },
+    {
+      "id": "summarize",
+      "parent": "generationapps",
+      "label": "Synthèse documentaire",
+      "kind": "méthode",
+      "summary": "Produire une version condensée d’une ou plusieurs sources.",
+      "use": "Préparation de décisions.",
+      "caution": "Contrôler les omissions et la fidélité aux sources.",
+      "sources": [
+        "hf"
+      ],
+      "tags": [],
+      "color": "#8b68b5",
+      "level": 3,
+      "domain": "gen"
+    },
+    {
+      "id": "agentarch",
+      "parent": "agents",
+      "label": "Architecture d’agents",
+      "kind": "sous-domaine",
+      "summary": "Organiser objectifs, contexte, décisions et actions.",
+      "use": "Automatiser des tâches avec étapes.",
+      "caution": "Définir les limites d’action et les conditions d’arrêt.",
+      "sources": [
+        "ai",
+        "mcp"
+      ],
+      "tags": [],
+      "color": "#bb7976",
+      "level": 2,
+      "domain": "agents"
+    },
+    {
+      "id": "tooluse",
+      "parent": "agentarch",
+      "label": "Appel d’outils",
+      "kind": "méthode",
+      "summary": "Permettre à un système de demander une opération structurée.",
+      "use": "Requêtes et actions contrôlées.",
+      "caution": "Les permissions doivent être appliquées hors du modèle.",
+      "sources": [
+        "mcp",
+        "owasp"
+      ],
+      "tags": [
+        "tool use",
+        "function calling"
+      ],
+      "color": "#bb7976",
+      "level": 3,
+      "domain": "agents"
+    },
+    {
+      "id": "memory",
+      "parent": "agentarch",
+      "label": "Mémoire & état",
+      "kind": "méthode",
+      "summary": "Conserver des informations utiles entre les étapes d’un agent.",
+      "use": "Continuité des tâches.",
+      "caution": "Prévoir durée de conservation et isolement des contextes.",
+      "sources": [
+        "ai",
+        "mcp"
+      ],
+      "tags": [],
+      "color": "#bb7976",
+      "level": 3,
+      "domain": "agents"
+    },
+    {
+      "id": "agentplanning",
+      "parent": "agentarch",
+      "label": "Boucle de planification",
+      "kind": "méthode",
+      "summary": "Décomposer un objectif et réviser un plan selon les observations.",
+      "use": "Résolution de tâches à plusieurs étapes.",
+      "caution": "Un plan plausible peut comporter des actions incorrectes.",
+      "sources": [
+        "ai"
+      ],
+      "tags": [],
+      "color": "#bb7976",
+      "level": 3,
+      "domain": "agents"
+    },
+    {
+      "id": "multiagent",
+      "parent": "agentarch",
+      "label": "Systèmes multi-agents",
+      "kind": "architecture",
+      "summary": "Faire interagir plusieurs agents aux responsabilités définies.",
+      "use": "Répartir ou coordonner des tâches.",
+      "caution": "La coordination augmente les coûts et les modes de défaillance.",
+      "sources": [
+        "ai"
+      ],
+      "tags": [
+        "multi-agent systems",
+        "MAS"
+      ],
+      "color": "#bb7976",
+      "level": 3,
+      "domain": "agents"
+    },
+    {
+      "id": "mcp",
+      "parent": "agentarch",
+      "label": "Model Context Protocol",
+      "kind": "technologie",
+      "summary": "Standardiser les échanges entre applications IA, outils et ressources.",
+      "use": "Connecter des services.",
+      "caution": "La standardisation ne garantit pas la sécurité d’un serveur.",
+      "sources": [
+        "mcp",
+        "owasp"
+      ],
+      "tags": [
+        "MCP"
+      ],
+      "color": "#bb7976",
+      "level": 3,
+      "domain": "agents"
+    },
+    {
+      "id": "robotics",
+      "parent": "agents",
+      "label": "Robotique & contrôle",
+      "kind": "sous-domaine",
+      "summary": "Percevoir un environnement physique et commander des actions.",
+      "use": "Navigation et manipulation.",
+      "caution": "Les erreurs peuvent avoir des conséquences physiques.",
+      "sources": [
+        "ai",
+        "rl"
+      ],
+      "tags": [],
+      "color": "#bb7976",
+      "level": 2,
+      "domain": "agents"
+    },
+    {
+      "id": "slam",
+      "parent": "robotics",
+      "label": "Localisation & cartographie",
+      "kind": "méthode",
+      "summary": "Estimer une position et une carte à partir d’observations.",
+      "use": "Navigation autonome.",
+      "caution": "Les changements de scène et les capteurs dégradent l’estimation.",
+      "sources": [
+        "ai"
+      ],
+      "tags": [
+        "SLAM"
+      ],
+      "color": "#bb7976",
+      "level": 3,
+      "domain": "agents"
+    },
+    {
+      "id": "imitation",
+      "parent": "robotics",
+      "label": "Apprentissage par imitation",
+      "kind": "méthode",
+      "summary": "Apprendre un comportement à partir de démonstrations.",
+      "use": "Acquisition de gestes ou stratégies.",
+      "caution": "Les démonstrations ne couvrent pas toutes les situations.",
+      "sources": [
+        "ai",
+        "rl"
+      ],
+      "tags": [],
+      "color": "#bb7976",
+      "level": 3,
+      "domain": "agents"
+    },
+    {
+      "id": "control",
+      "parent": "robotics",
+      "label": "Contrôle adaptatif",
+      "kind": "méthode",
+      "summary": "Ajuster des actions à partir de l’état et des objectifs d’un système.",
+      "use": "Pilotage avec rétroaction.",
+      "caution": "Les contraintes de stabilité et de sécurité doivent être explicites.",
+      "sources": [
+        "ai",
+        "rl"
+      ],
+      "tags": [],
+      "color": "#bb7976",
+      "level": 3,
+      "domain": "agents"
+    },
+    {
+      "id": "dataprep",
+      "parent": "data",
+      "label": "Préparation & qualité",
+      "kind": "sous-domaine",
+      "summary": "Organiser les données et contrôler leur aptitude à l’usage.",
+      "use": "Fiabiliser l’entraînement et la recherche.",
+      "caution": "Les erreurs de préparation se propagent dans la chaîne.",
+      "sources": [
+        "sk",
+        "mlflow"
+      ],
+      "tags": [],
+      "color": "#829456",
+      "level": 2,
+      "domain": "data"
+    },
+    {
+      "id": "features",
+      "parent": "dataprep",
+      "label": "Feature engineering",
+      "kind": "méthode",
+      "summary": "Construire des variables pertinentes à partir des données brutes.",
+      "use": "Modèles tabulaires.",
+      "caution": "Éviter les informations indisponibles au moment de la prédiction.",
+      "sources": [
+        "sk"
+      ],
+      "tags": [],
+      "color": "#829456",
+      "level": 3,
+      "domain": "data"
+    },
+    {
+      "id": "labeling",
+      "parent": "dataprep",
+      "label": "Annotation & jeux de données",
+      "kind": "méthode",
+      "summary": "Définir et produire les exemples et cibles utilisés pour apprendre ou évaluer.",
+      "use": "Constitution d’un corpus.",
+      "caution": "Mesurer la cohérence entre annotateurs.",
+      "sources": [
+        "sk",
+        "nist"
+      ],
+      "tags": [],
+      "color": "#829456",
+      "level": 3,
+      "domain": "data"
+    },
+    {
+      "id": "pipeline",
+      "parent": "dataprep",
+      "label": "Pipelines de données",
+      "kind": "méthode",
+      "summary": "Enchaîner des transformations reproductibles des entrées.",
+      "use": "Préparation cohérente des données.",
+      "caution": "Prévenir les fuites entre entraînement et test.",
+      "sources": [
+        "sk",
+        "mlflow"
+      ],
+      "tags": [
+        "ETL",
+        "ELT"
+      ],
+      "color": "#829456",
+      "level": 3,
+      "domain": "data"
+    },
+    {
+      "id": "provenance",
+      "parent": "dataprep",
+      "label": "Provenance & traçabilité",
+      "kind": "méthode",
+      "summary": "Conserver l’origine et les transformations des données utilisées.",
+      "use": "Audit et reproduction.",
+      "caution": "Une origine connue ne suffit pas à garantir la qualité.",
+      "sources": [
+        "rdf",
+        "nist"
+      ],
+      "tags": [],
+      "color": "#829456",
+      "level": 3,
+      "domain": "data"
+    },
+    {
+      "id": "retrieval",
+      "parent": "data",
+      "label": "Recherche & indexation",
+      "kind": "sous-domaine",
+      "summary": "Retrouver les éléments pertinents d’un corpus.",
+      "use": "Accès à la connaissance.",
+      "caution": "La pertinence dépend des requêtes et des droits d’accès.",
+      "sources": [
+        "rag"
+      ],
+      "tags": [],
+      "color": "#829456",
+      "level": 2,
+      "domain": "data"
+    },
+    {
+      "id": "vector",
+      "parent": "retrieval",
+      "label": "Index vectoriels",
+      "kind": "technologie",
+      "summary": "Indexer des représentations pour retrouver des voisins similaires.",
+      "use": "Recherche sémantique.",
+      "caution": "Le voisin le plus proche n’est pas toujours une preuve pertinente.",
+      "sources": [
+        "rag"
+      ],
+      "tags": [
+        "vector database",
+        "FAISS",
+        "pgvector"
+      ],
+      "color": "#829456",
+      "level": 3,
+      "domain": "data"
+    },
+    {
+      "id": "hybrid",
+      "parent": "retrieval",
+      "label": "Recherche hybride",
+      "kind": "architecture",
+      "summary": "Combiner correspondance lexicale et similarité vectorielle.",
+      "use": "Recherche documentaire.",
+      "caution": "Calibrer la fusion sur des requêtes représentatives.",
+      "sources": [
+        "rag",
+        "sk"
+      ],
+      "tags": [
+        "BM25",
+        "hybrid search"
+      ],
+      "color": "#829456",
+      "level": 3,
+      "domain": "data"
+    },
+    {
+      "id": "reranking",
+      "parent": "retrieval",
+      "label": "Reranking",
+      "kind": "méthode",
+      "summary": "Réordonner des candidats avec une estimation plus précise de leur pertinence.",
+      "use": "Améliorer le contexte d’un RAG.",
+      "caution": "Mesurer le gain au regard de la latence ajoutée.",
+      "sources": [
+        "rag",
+        "hf"
+      ],
+      "tags": [],
+      "color": "#829456",
+      "level": 3,
+      "domain": "data"
+    },
+    {
+      "id": "chunking",
+      "parent": "retrieval",
+      "label": "Découpage documentaire",
+      "kind": "méthode",
+      "summary": "Diviser un corpus en unités adaptées à l’indexation et au contexte.",
+      "use": "Préparer une base RAG.",
+      "caution": "Un mauvais découpage sépare les informations nécessaires.",
+      "sources": [
+        "rag"
+      ],
+      "tags": [
+        "chunking"
+      ],
+      "color": "#829456",
+      "level": 3,
+      "domain": "data"
+    },
+    {
+      "id": "knowledge",
+      "parent": "data",
+      "label": "Représentation des connaissances",
+      "kind": "sous-domaine",
+      "summary": "Exprimer des entités, relations et significations structurées.",
+      "use": "Interopérabilité et raisonnement.",
+      "caution": "Le modèle doit être gouverné et actualisé.",
+      "sources": [
+        "rdf",
+        "ai"
+      ],
+      "tags": [],
+      "color": "#829456",
+      "level": 2,
+      "domain": "data"
+    },
+    {
+      "id": "kg",
+      "parent": "knowledge",
+      "label": "Graphes de connaissances",
+      "kind": "architecture",
+      "summary": "Relier des entités avec des relations décrites.",
+      "use": "Navigation et intégration sémantique.",
+      "caution": "La couverture et la fiabilité des relations doivent être suivies.",
+      "sources": [
+        "rdf",
+        "ai"
+      ],
+      "tags": [
+        "knowledge graph",
+        "KG"
+      ],
+      "color": "#829456",
+      "level": 3,
+      "domain": "data"
+    },
+    {
+      "id": "ontology",
+      "parent": "knowledge",
+      "label": "Ontologies",
+      "kind": "méthode",
+      "summary": "Définir des concepts et relations avec une sémantique formelle.",
+      "use": "Vocabulaire commun et inférence.",
+      "caution": "La maintenance et les divergences de sens exigent une gouvernance.",
+      "sources": [
+        "rdf",
+        "ai"
+      ],
+      "tags": [
+        "OWL"
+      ],
+      "color": "#829456",
+      "level": 3,
+      "domain": "data"
+    },
+    {
+      "id": "rdf",
+      "parent": "knowledge",
+      "label": "RDF",
+      "kind": "technologie",
+      "summary": "Représenter des assertions sous forme de triplets sujet-prédicat-objet.",
+      "use": "Échange de données liées.",
+      "caution": "RDF représente l’information sans garantir sa vérité.",
+      "sources": [
+        "rdf"
+      ],
+      "tags": [
+        "linked data"
+      ],
+      "color": "#829456",
+      "level": 3,
+      "domain": "data"
+    },
+    {
+      "id": "frameworks",
+      "parent": "ops",
+      "label": "Frameworks & outillage",
+      "kind": "sous-domaine",
+      "summary": "Bibliothèques et plateformes pour construire des modèles et applications.",
+      "use": "Accélérer l’implémentation.",
+      "caution": "Vérifier la compatibilité, les licences et le cycle de maintenance.",
+      "sources": [
+        "torch",
+        "hf",
+        "mlflow"
+      ],
+      "tags": [],
+      "color": "#748a9b",
+      "level": 2,
+      "domain": "ops"
+    },
+    {
+      "id": "pytorch",
+      "parent": "frameworks",
+      "label": "PyTorch",
+      "kind": "technologie",
+      "summary": "Bibliothèque de tenseurs et de différentiation automatique pour réseaux neuronaux.",
+      "use": "Entraînement et expérimentation.",
+      "caution": "Reproductibilité et configuration matérielle doivent être maîtrisées.",
+      "sources": [
+        "torch"
+      ],
+      "tags": [
+        "torch"
+      ],
+      "color": "#748a9b",
+      "level": 3,
+      "domain": "ops"
+    },
+    {
+      "id": "sklearn",
+      "parent": "frameworks",
+      "label": "scikit-learn",
+      "kind": "technologie",
+      "summary": "Bibliothèque de modèles, transformations et outils d’évaluation en Python.",
+      "use": "Apprentissage sur données structurées.",
+      "caution": "Les pratiques de validation restent à définir par l’équipe.",
+      "sources": [
+        "sk"
+      ],
+      "tags": [
+        "sklearn"
+      ],
+      "color": "#748a9b",
+      "level": 3,
+      "domain": "ops"
+    },
+    {
+      "id": "hftransformers",
+      "parent": "frameworks",
+      "label": "Hugging Face Transformers",
+      "kind": "technologie",
+      "summary": "Bibliothèque de définitions et d’exploitation de modèles préentraînés.",
+      "use": "Applications texte, vision et audio.",
+      "caution": "Valider chaque modèle et sa licence.",
+      "sources": [
+        "hf"
+      ],
+      "tags": [
+        "transformers library"
+      ],
+      "color": "#748a9b",
+      "level": 3,
+      "domain": "ops"
+    },
+    {
+      "id": "hfdiffusers",
+      "parent": "frameworks",
+      "label": "Hugging Face Diffusers",
+      "kind": "technologie",
+      "summary": "Bibliothèque de pipelines de diffusion préentraînés.",
+      "use": "Génération d’images, de vidéo ou d’audio.",
+      "caution": "Valider ressources nécessaires et usages autorisés.",
+      "sources": [
+        "diffusers"
+      ],
+      "tags": [
+        "diffusers library"
+      ],
+      "color": "#748a9b",
+      "level": 3,
+      "domain": "ops"
+    },
+    {
+      "id": "mlflow",
+      "parent": "frameworks",
+      "label": "MLflow",
+      "kind": "technologie",
+      "summary": "Plateforme de suivi et de gestion du cycle de vie des systèmes IA.",
+      "use": "Expériences, versions et exploitation.",
+      "caution": "Un outil de suivi ne définit pas la gouvernance de l’équipe.",
+      "sources": [
+        "mlflow"
+      ],
+      "tags": [
+        "model registry"
+      ],
+      "color": "#748a9b",
+      "level": 3,
+      "domain": "ops"
+    },
+    {
+      "id": "inference",
+      "parent": "ops",
+      "label": "Calcul & inférence",
+      "kind": "sous-domaine",
+      "summary": "Exécuter efficacement les modèles et gérer les ressources de calcul.",
+      "use": "Service prédictif ou génératif.",
+      "caution": "Arbitrer débit, latence, qualité et consommation.",
+      "sources": [
+        "vllm",
+        "torch"
+      ],
+      "tags": [],
+      "color": "#748a9b",
+      "level": 2,
+      "domain": "ops"
+    },
+    {
+      "id": "accelerator",
+      "parent": "inference",
+      "label": "Accélérateurs & calcul distribué",
+      "kind": "technologie",
+      "summary": "Répartir les calculs sur des unités adaptées et plusieurs dispositifs.",
+      "use": "Entraînement de grands modèles.",
+      "caution": "Les communications et la mémoire peuvent devenir limitantes.",
+      "sources": [
+        "torch"
+      ],
+      "tags": [
+        "GPU",
+        "TPU",
+        "NPU",
+        "FSDP"
+      ],
+      "color": "#748a9b",
+      "level": 3,
+      "domain": "ops"
+    },
+    {
+      "id": "quantization",
+      "parent": "inference",
+      "label": "Quantification",
+      "kind": "méthode",
+      "summary": "Réduire la précision numérique des représentations du modèle.",
+      "use": "Diminuer mémoire et coût d’inférence.",
+      "caution": "Mesurer la perte de qualité sur les usages réels.",
+      "sources": [
+        "quant",
+        "vllm"
+      ],
+      "tags": [
+        "INT8",
+        "INT4"
+      ],
+      "color": "#748a9b",
+      "level": 3,
+      "domain": "ops"
+    },
+    {
+      "id": "distillation",
+      "parent": "inference",
+      "label": "Distillation",
+      "kind": "méthode",
+      "summary": "Entraîner un modèle à reproduire certains comportements d’un autre.",
+      "use": "Déployer un modèle plus compact.",
+      "caution": "Le transfert peut conserver des erreurs du modèle enseignant.",
+      "sources": [
+        "hf",
+        "torch"
+      ],
+      "tags": [],
+      "color": "#748a9b",
+      "level": 3,
+      "domain": "ops"
+    },
+    {
+      "id": "vllm",
+      "parent": "inference",
+      "label": "vLLM",
+      "kind": "technologie",
+      "summary": "Moteur d’inférence et de service conçu pour les modèles de langage.",
+      "use": "Servir plusieurs requêtes LLM.",
+      "caution": "La performance dépend du matériel et de la charge.",
+      "sources": [
+        "vllm"
+      ],
+      "tags": [
+        "PagedAttention"
+      ],
+      "color": "#748a9b",
+      "level": 3,
+      "domain": "ops"
+    },
+    {
+      "id": "edge",
+      "parent": "inference",
+      "label": "IA embarquée & edge",
+      "kind": "architecture",
+      "summary": "Exécuter un système IA près des sources de données ou sur un appareil.",
+      "use": "Traitement local à faible latence.",
+      "caution": "Les contraintes matérielles limitent les modèles disponibles.",
+      "sources": [
+        "torch"
+      ],
+      "tags": [
+        "edge AI",
+        "on-device"
+      ],
+      "color": "#748a9b",
+      "level": 3,
+      "domain": "ops"
+    },
+    {
+      "id": "lifecycle",
+      "parent": "ops",
+      "label": "MLOps & LLMOps",
+      "kind": "sous-domaine",
+      "summary": "Organiser la livraison, les versions et le suivi des systèmes IA.",
+      "use": "Industrialisation durable.",
+      "caution": "Le cycle de vie inclut données, modèles et usages.",
+      "sources": [
+        "mlflow",
+        "nist"
+      ],
+      "tags": [],
+      "color": "#748a9b",
+      "level": 2,
+      "domain": "ops"
+    },
+    {
+      "id": "experiments",
+      "parent": "lifecycle",
+      "label": "Suivi d’expériences",
+      "kind": "méthode",
+      "summary": "Enregistrer paramètres, données de référence, artefacts et mesures.",
+      "use": "Comparer et reproduire des essais.",
+      "caution": "Les comparaisons nécessitent des conditions équivalentes.",
+      "sources": [
+        "mlflow"
+      ],
+      "tags": [],
+      "color": "#748a9b",
+      "level": 3,
+      "domain": "ops"
+    },
+    {
+      "id": "registry",
+      "parent": "lifecycle",
+      "label": "Registre & versionnement",
+      "kind": "méthode",
+      "summary": "Gérer les versions des modèles et leurs états de validation.",
+      "use": "Traçabilité des déploiements.",
+      "caution": "Versionner aussi données, prompts et configurations pertinents.",
+      "sources": [
+        "mlflow"
+      ],
+      "tags": [
+        "model registry"
+      ],
+      "color": "#748a9b",
+      "level": 3,
+      "domain": "ops"
+    },
+    {
+      "id": "monitoring",
+      "parent": "lifecycle",
+      "label": "Surveillance & dérive",
+      "kind": "méthode",
+      "summary": "Suivre qualité, données et comportement après déploiement.",
+      "use": "Détecter les dégradations.",
+      "caution": "Les mesures de dérive ne remplacent pas l’évaluation des résultats.",
+      "sources": [
+        "mlflow",
+        "nist"
+      ],
+      "tags": [
+        "drift",
+        "observability"
+      ],
+      "color": "#748a9b",
+      "level": 3,
+      "domain": "ops"
+    },
+    {
+      "id": "deployment",
+      "parent": "lifecycle",
+      "label": "Déploiement & intégration",
+      "kind": "architecture",
+      "summary": "Exposer un modèle dans un service et son environnement opérationnel.",
+      "use": "Intégration au système d’information.",
+      "caution": "Prévoir retour arrière, contrôle d’accès et objectifs de service.",
+      "sources": [
+        "mlflow",
+        "vllm"
+      ],
+      "tags": [
+        "API",
+        "serving"
+      ],
+      "color": "#748a9b",
+      "level": 3,
+      "domain": "ops"
+    },
+    {
+      "id": "evaluation",
+      "parent": "trust",
+      "label": "Évaluation des performances",
+      "kind": "sous-domaine",
+      "summary": "Mesurer la qualité sur des tâches et scénarios représentatifs.",
+      "use": "Décider de l’aptitude à l’usage.",
+      "caution": "Un score isolé peut cacher des échecs critiques.",
+      "sources": [
+        "metrics",
+        "nist"
+      ],
+      "tags": [],
+      "color": "#9a8a65",
+      "level": 2,
+      "domain": "trust"
+    },
+    {
+      "id": "validation",
+      "parent": "evaluation",
+      "label": "Validation & généralisation",
+      "kind": "méthode",
+      "summary": "Tester sur des données séparées de l’apprentissage.",
+      "use": "Estimer la performance future.",
+      "caution": "Respecter les structures temporelles et les groupes de données.",
+      "sources": [
+        "sk",
+        "metrics"
+      ],
+      "tags": [
+        "cross-validation"
+      ],
+      "color": "#9a8a65",
+      "level": 3,
+      "domain": "trust"
+    },
+    {
+      "id": "precision",
+      "parent": "evaluation",
+      "label": "Précision, rappel & F1",
+      "kind": "méthode",
+      "summary": "Mesurer différents aspects des erreurs de classification.",
+      "use": "Choisir un seuil adapté.",
+      "caution": "Le compromis dépend du coût métier des erreurs.",
+      "sources": [
+        "metrics"
+      ],
+      "tags": [
+        "precision",
+        "recall",
+        "F1"
+      ],
+      "color": "#9a8a65",
+      "level": 3,
+      "domain": "trust"
+    },
+    {
+      "id": "calibration",
+      "parent": "evaluation",
+      "label": "Calibration & incertitude",
+      "kind": "méthode",
+      "summary": "Évaluer si les probabilités annoncées correspondent aux fréquences observées.",
+      "use": "Décisions avec niveau de confiance.",
+      "caution": "La calibration peut changer avec le contexte.",
+      "sources": [
+        "sk",
+        "metrics"
+      ],
+      "tags": [],
+      "color": "#9a8a65",
+      "level": 3,
+      "domain": "trust"
+    },
+    {
+      "id": "geneval",
+      "parent": "evaluation",
+      "label": "Évaluation des systèmes génératifs",
+      "kind": "méthode",
+      "summary": "Mesurer fidélité, utilité, respect des consignes et défaillances.",
+      "use": "Acceptation d’un assistant.",
+      "caution": "Combiner scénarios métier, mesures et jugement humain.",
+      "sources": [
+        "nist",
+        "mlflow"
+      ],
+      "tags": [],
+      "color": "#9a8a65",
+      "level": 3,
+      "domain": "trust"
+    },
+    {
+      "id": "rageval",
+      "parent": "evaluation",
+      "label": "Évaluation du RAG",
+      "kind": "méthode",
+      "summary": "Évaluer séparément la recherche et l’utilisation des documents.",
+      "use": "Localiser les erreurs documentaires.",
+      "caution": "Une réponse citée peut mal interpréter sa source.",
+      "sources": [
+        "rag",
+        "nist"
+      ],
+      "tags": [],
+      "color": "#9a8a65",
+      "level": 3,
+      "domain": "trust"
+    },
+    {
+      "id": "security",
+      "parent": "trust",
+      "label": "Sécurité & robustesse",
+      "kind": "sous-domaine",
+      "summary": "Tester et contrôler les comportements en conditions adverses.",
+      "use": "Limiter les impacts d’un détournement.",
+      "caution": "La sécurité concerne la chaîne applicative complète.",
+      "sources": [
+        "owasp",
+        "nist"
+      ],
+      "tags": [],
+      "color": "#9a8a65",
+      "level": 2,
+      "domain": "trust"
+    },
+    {
+      "id": "injection",
+      "parent": "security",
+      "label": "Injection de prompt",
+      "kind": "risque",
+      "summary": "Entrée cherchant à modifier indûment les instructions ou actions d’un système.",
+      "use": "Modélisation des menaces.",
+      "caution": "Traiter les contenus externes comme non fiables.",
+      "sources": [
+        "owasp"
+      ],
+      "tags": [
+        "prompt injection"
+      ],
+      "color": "#9a8a65",
+      "level": 3,
+      "domain": "trust"
+    },
+    {
+      "id": "hallucination",
+      "parent": "security",
+      "label": "Hallucinations & confabulations",
+      "kind": "risque",
+      "summary": "Contenus générés faux ou non étayés, parfois présentés avec assurance.",
+      "use": "Définir des contrôles de fidélité.",
+      "caution": "Une citation ou un ton confiant ne prouve pas la véracité.",
+      "sources": [
+        "nist",
+        "owasp"
+      ],
+      "tags": [
+        "confabulation"
+      ],
+      "color": "#9a8a65",
+      "level": 3,
+      "domain": "trust"
+    },
+    {
+      "id": "poisoning",
+      "parent": "security",
+      "label": "Empoisonnement des données",
+      "kind": "risque",
+      "summary": "Altération malveillante des données pour influencer un système.",
+      "use": "Sécuriser les sources et entraînements.",
+      "caution": "Contrôler provenance et changements de corpus.",
+      "sources": [
+        "owasp"
+      ],
+      "tags": [
+        "data poisoning"
+      ],
+      "color": "#9a8a65",
+      "level": 3,
+      "domain": "trust"
+    },
+    {
+      "id": "redteam",
+      "parent": "security",
+      "label": "Tests adversariaux",
+      "kind": "méthode",
+      "summary": "Explorer activement des scénarios de contournement ou de défaillance.",
+      "use": "Identifier des faiblesses avant et après déploiement.",
+      "caution": "Des tests réussis ne garantissent pas l’absence de vulnérabilités.",
+      "sources": [
+        "owasp",
+        "nist"
+      ],
+      "tags": [
+        "red teaming"
+      ],
+      "color": "#9a8a65",
+      "level": 3,
+      "domain": "trust"
+    },
+    {
+      "id": "guardrails",
+      "parent": "security",
+      "label": "Garde-fous applicatifs",
+      "kind": "méthode",
+      "summary": "Appliquer des validations, permissions et limites autour du modèle.",
+      "use": "Borner entrées, sorties et actions.",
+      "caution": "Aucun contrôle unique ne couvre tous les risques.",
+      "sources": [
+        "owasp",
+        "mcp"
+      ],
+      "tags": [
+        "guardrails"
+      ],
+      "color": "#9a8a65",
+      "level": 3,
+      "domain": "trust"
+    },
+    {
+      "id": "governance",
+      "parent": "trust",
+      "label": "Gouvernance & responsabilité",
+      "kind": "sous-domaine",
+      "summary": "Attribuer les décisions et définir politiques, risques et contrôles.",
+      "use": "Piloter le portefeuille des usages IA.",
+      "caution": "Une politique doit se traduire en pratiques observables.",
+      "sources": [
+        "nist"
+      ],
+      "tags": [],
+      "color": "#9a8a65",
+      "level": 2,
+      "domain": "trust"
+    },
+    {
+      "id": "fairness",
+      "parent": "governance",
+      "label": "Équité & biais",
+      "kind": "méthode",
+      "summary": "Évaluer les effets différenciés et les biais pertinents au contexte.",
+      "use": "Examiner l’impact sur des populations.",
+      "caution": "Les définitions d’équité peuvent être incompatibles entre elles.",
+      "sources": [
+        "nist"
+      ],
+      "tags": [
+        "fairness",
+        "bias"
+      ],
+      "color": "#9a8a65",
+      "level": 3,
+      "domain": "trust"
+    },
+    {
+      "id": "explain",
+      "parent": "governance",
+      "label": "Explicabilité & interprétabilité",
+      "kind": "méthode",
+      "summary": "Rendre certains aspects d’un résultat ou d’un modèle compréhensibles.",
+      "use": "Appui à la décision et à l’audit.",
+      "caution": "Une explication locale ne prouve pas la causalité.",
+      "sources": [
+        "nist",
+        "sk"
+      ],
+      "tags": [
+        "XAI",
+        "SHAP",
+        "LIME"
+      ],
+      "color": "#9a8a65",
+      "level": 3,
+      "domain": "trust"
+    },
+    {
+      "id": "human",
+      "parent": "governance",
+      "label": "Supervision humaine",
+      "kind": "méthode",
+      "summary": "Définir quand et comment une personne examine ou autorise une action.",
+      "use": "Contrôler des décisions sensibles.",
+      "caution": "La supervision doit être possible, informée et effective.",
+      "sources": [
+        "nist"
+      ],
+      "tags": [
+        "human in the loop",
+        "HITL"
+      ],
+      "color": "#9a8a65",
+      "level": 3,
+      "domain": "trust"
+    },
+    {
+      "id": "privacy",
+      "parent": "governance",
+      "label": "Confidentialité & accès",
+      "kind": "méthode",
+      "summary": "Limiter l’exposition des données et l’accès aux informations et actions.",
+      "use": "Protection des corpus et conversations.",
+      "caution": "Appliquer les droits dans les systèmes sources et les index.",
+      "sources": [
+        "nist",
+        "owasp"
+      ],
+      "tags": [
+        "privacy",
+        "access control"
+      ],
+      "color": "#9a8a65",
+      "level": 3,
+      "domain": "trust"
+    },
+    {
+      "id": "airmf",
+      "parent": "governance",
+      "label": "NIST AI RMF",
+      "kind": "référentiel",
+      "summary": "Cadre volontaire structuré autour de Govern, Map, Measure et Manage.",
+      "use": "Organisation de la gestion des risques.",
+      "caution": "Ce cadre ne constitue pas à lui seul une conformité juridique.",
+      "sources": [
+        "nist"
+      ],
+      "tags": [
+        "risk management"
+      ],
+      "color": "#9a8a65",
+      "level": 3,
+      "domain": "trust"
+    },
+    {
+      "id": "federated",
+      "parent": "paradigms",
+      "label": "Apprentissage fédéré",
+      "kind": "méthode",
+      "summary": "Entraîner un modèle avec des données conservées sur plusieurs participants et des mises à jour agrégées.",
+      "use": "Coopération sur données distribuées.",
+      "caution": "Les mises à jour peuvent encore révéler des informations ; la confidentialité exige des contrôles complémentaires.",
+      "sources": [
+        "federated"
+      ],
+      "tags": [
+        "federated learning"
+      ],
+      "color": "#5a8b74",
+      "level": 3,
+      "domain": "ml"
+    },
+    {
+      "id": "ssm",
+      "parent": "neural",
+      "label": "Modèles à espaces d’état",
+      "kind": "architecture",
+      "summary": "Modéliser une séquence via des états internes mis à jour, avec des variantes sélectives comme Mamba.",
+      "use": "Traitement de longues séquences.",
+      "caution": "Les propriétés et performances varient selon l’architecture et la tâche.",
+      "sources": [
+        "ssm"
+      ],
+      "tags": [
+        "SSM",
+        "Mamba"
+      ],
+      "color": "#6d83b8",
+      "level": 3,
+      "domain": "dl"
+    },
+    {
+      "id": "vae",
+      "parent": "foundation",
+      "label": "Autoencodeurs variationnels",
+      "kind": "méthode",
+      "summary": "Apprendre une représentation latente probabiliste et un décodeur permettant reconstruction et génération.",
+      "use": "Représentations et synthèse de données.",
+      "caution": "L’approximation de la distribution latente influence la qualité.",
+      "sources": [
+        "vae"
+      ],
+      "tags": [
+        "VAE",
+        "variational autoencoder"
+      ],
+      "color": "#8b68b5",
+      "level": 3,
+      "domain": "gen"
+    },
+    {
+      "id": "recommendation",
+      "parent": "ml",
+      "label": "Recommandation & ranking",
+      "kind": "sous-domaine",
+      "summary": "Estimer la pertinence relative d’éléments pour une requête, un contexte ou une personne.",
+      "use": "Prioriser des contenus ou des suggestions.",
+      "caution": "Les historiques d’interaction peuvent renforcer des biais d’exposition.",
+      "sources": [
+        "rec"
+      ],
+      "tags": [],
+      "color": "#5a8b74",
+      "level": 2,
+      "domain": "ml"
+    },
+    {
+      "id": "recsys",
+      "parent": "recommendation",
+      "label": "Systèmes de recommandation",
+      "kind": "méthode",
+      "summary": "Combiner des signaux utilisateurs, éléments et contextes pour proposer des candidats pertinents.",
+      "use": "Personnalisation des parcours.",
+      "caution": "Évaluer la diversité et la pertinence au-delà du taux de clic.",
+      "sources": [
+        "rec"
+      ],
+      "tags": [
+        "recommender systems",
+        "RecSys"
+      ],
+      "color": "#5a8b74",
+      "level": 3,
+      "domain": "ml"
+    },
+    {
+      "id": "collaborative",
+      "parent": "recommendation",
+      "label": "Représentations utilisateurs-items",
+      "kind": "méthode",
+      "summary": "Apprendre des représentations d’utilisateurs et d’éléments à partir d’interactions.",
+      "use": "Prédire la pertinence d’une recommandation.",
+      "caution": "Les nouveaux utilisateurs ou éléments posent un problème de démarrage à froid.",
+      "sources": [
+        "rec"
+      ],
+      "tags": [
+        "collaborative filtering",
+        "filtrage collaboratif"
+      ],
+      "color": "#5a8b74",
+      "level": 3,
+      "domain": "ml"
+    },
+    {
+      "id": "torchrec",
+      "parent": "frameworks",
+      "label": "TorchRec",
+      "kind": "technologie",
+      "summary": "Bibliothèque PyTorch pour construire et distribuer des modèles de recommandation basés sur les embeddings.",
+      "use": "Tables d’embeddings et recommandation à grande échelle.",
+      "caution": "La distribution des tables exige de maîtriser mémoire et communications.",
+      "sources": [
+        "rec"
+      ],
+      "tags": [
+        "recsys framework"
+      ],
+      "color": "#748a9b",
+      "level": 3,
+      "domain": "ops"
+    }
+  ],
+  "edges": [
+    {
+      "from": "ai",
+      "to": "symbolic",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "ai"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "ai",
+      "to": "ml",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "sk",
+        "rl"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "ai",
+      "to": "dl",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "torch",
+        "attention"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "ai",
+      "to": "nlp",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "ai",
+      "to": "vision",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf",
+        "torch"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "ai",
+      "to": "gen",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf",
+        "diffusers"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "ai",
+      "to": "agents",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "ai",
+        "mcp"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "ai",
+      "to": "data",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "sk",
+        "rdf",
+        "rag"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "ai",
+      "to": "ops",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "mlflow",
+        "vllm",
+        "torch"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "ai",
+      "to": "trust",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "nist",
+        "owasp",
+        "metrics"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "symbolic",
+      "to": "logic",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "ai"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "logic",
+      "to": "expert",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "ai"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "logic",
+      "to": "fuzzy",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "ai"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "logic",
+      "to": "constraints",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "ai"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "symbolic",
+      "to": "search",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "ai"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "search",
+      "to": "astar",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "ai"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "search",
+      "to": "planning",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "ai"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "search",
+      "to": "optimization",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "ai"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "symbolic",
+      "to": "uncertainty",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "ai"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "uncertainty",
+      "to": "bayes",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "ai"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "uncertainty",
+      "to": "causal",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "ai"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "uncertainty",
+      "to": "neurosymbolic",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "ai",
+        "torch"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "ml",
+      "to": "supervised",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "sk"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "supervised",
+      "to": "classification",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "sk",
+        "metrics"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "supervised",
+      "to": "regression",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "sk"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "supervised",
+      "to": "trees",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "sk"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "supervised",
+      "to": "forest",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "ensemble"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "supervised",
+      "to": "boosting",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "ensemble"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "supervised",
+      "to": "svm",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "sk"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "ml",
+      "to": "unsupervised",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "sk",
+        "cluster"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "unsupervised",
+      "to": "clustering",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "cluster"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "unsupervised",
+      "to": "pca",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "sk"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "unsupervised",
+      "to": "anomaly",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "sk"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "ml",
+      "to": "paradigms",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "sk",
+        "rl"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "paradigms",
+      "to": "semi",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "sk"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "paradigms",
+      "to": "self",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "paradigms",
+      "to": "transfer",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "torch",
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "paradigms",
+      "to": "rl",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "rl"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "rl",
+      "to": "qlearning",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "rl",
+        "torch"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "rl",
+      "to": "ppo",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "rl"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "dl",
+      "to": "neural",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "torch"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "neural",
+      "to": "mlp",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "torch"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "neural",
+      "to": "cnn",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "torch"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "neural",
+      "to": "rnn",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "torch"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "neural",
+      "to": "gnn",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "pyg"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "dl",
+      "to": "transformers",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "attention",
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "transformers",
+      "to": "attention",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "attention"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "transformers",
+      "to": "encoder",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "attention",
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "transformers",
+      "to": "moe",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "dl",
+      "to": "training",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "torch"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "training",
+      "to": "backprop",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "torch"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "training",
+      "to": "regularization",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "torch",
+        "sk"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "training",
+      "to": "embedding",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf",
+        "rag"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "nlp",
+      "to": "text",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "text",
+      "to": "token",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "text",
+      "to": "ner",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "text",
+      "to": "sentiment",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "text",
+      "to": "translation",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "nlp",
+      "to": "speech",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "speech",
+      "to": "asr",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "speech",
+      "to": "tts",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "speech",
+      "to": "audio",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "vision",
+      "to": "perception",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf",
+        "torch"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "perception",
+      "to": "imageclass",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf",
+        "torch"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "perception",
+      "to": "detection",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf",
+        "torch"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "perception",
+      "to": "segmentation",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "perception",
+      "to": "ocr",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "vision",
+      "to": "multimodal",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "multimodal",
+      "to": "vlm",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "multimodal",
+      "to": "contrastive",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "clip"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "multimodal",
+      "to": "video",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "gen",
+      "to": "foundation",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf",
+        "diffusers"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "foundation",
+      "to": "foundationmodel",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf",
+        "nist"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "foundation",
+      "to": "llm",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf",
+        "nist"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "foundation",
+      "to": "diffusion",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "diffusion",
+        "diffusers"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "foundation",
+      "to": "gan",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "gan"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "foundation",
+      "to": "autoregressive",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "gen",
+      "to": "adaptation",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf",
+        "lora",
+        "dpo"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "adaptation",
+      "to": "prompt",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf",
+        "owasp"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "adaptation",
+      "to": "finetune",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf",
+        "lora"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "adaptation",
+      "to": "lora",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "lora",
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "adaptation",
+      "to": "rlhf",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "rl",
+        "dpo"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "adaptation",
+      "to": "dpo",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "dpo"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "gen",
+      "to": "generationapps",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "rag",
+        "hf",
+        "owasp"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "generationapps",
+      "to": "rag",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "rag"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "generationapps",
+      "to": "codegen",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf",
+        "owasp"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "generationapps",
+      "to": "structured",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf",
+        "mcp"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "generationapps",
+      "to": "summarize",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "agents",
+      "to": "agentarch",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "ai",
+        "mcp"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "agentarch",
+      "to": "tooluse",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "mcp",
+        "owasp"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "agentarch",
+      "to": "memory",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "ai",
+        "mcp"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "agentarch",
+      "to": "agentplanning",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "ai"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "agentarch",
+      "to": "multiagent",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "ai"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "agentarch",
+      "to": "mcp",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "mcp",
+        "owasp"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "agents",
+      "to": "robotics",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "ai",
+        "rl"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "robotics",
+      "to": "slam",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "ai"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "robotics",
+      "to": "imitation",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "ai",
+        "rl"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "robotics",
+      "to": "control",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "ai",
+        "rl"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "data",
+      "to": "dataprep",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "sk",
+        "mlflow"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "dataprep",
+      "to": "features",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "sk"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "dataprep",
+      "to": "labeling",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "sk",
+        "nist"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "dataprep",
+      "to": "pipeline",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "sk",
+        "mlflow"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "dataprep",
+      "to": "provenance",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "rdf",
+        "nist"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "data",
+      "to": "retrieval",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "rag"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "retrieval",
+      "to": "vector",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "rag"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "retrieval",
+      "to": "hybrid",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "rag",
+        "sk"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "retrieval",
+      "to": "reranking",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "rag",
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "retrieval",
+      "to": "chunking",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "rag"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "data",
+      "to": "knowledge",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "rdf",
+        "ai"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "knowledge",
+      "to": "kg",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "rdf",
+        "ai"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "knowledge",
+      "to": "ontology",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "rdf",
+        "ai"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "knowledge",
+      "to": "rdf",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "rdf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "ops",
+      "to": "frameworks",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "torch",
+        "hf",
+        "mlflow"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "frameworks",
+      "to": "pytorch",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "torch"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "frameworks",
+      "to": "sklearn",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "sk"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "frameworks",
+      "to": "hftransformers",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "frameworks",
+      "to": "hfdiffusers",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "diffusers"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "frameworks",
+      "to": "mlflow",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "mlflow"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "ops",
+      "to": "inference",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "vllm",
+        "torch"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "inference",
+      "to": "accelerator",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "torch"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "inference",
+      "to": "quantization",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "quant",
+        "vllm"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "inference",
+      "to": "distillation",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "hf",
+        "torch"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "inference",
+      "to": "vllm",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "vllm"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "inference",
+      "to": "edge",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "torch"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "ops",
+      "to": "lifecycle",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "mlflow",
+        "nist"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "lifecycle",
+      "to": "experiments",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "mlflow"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "lifecycle",
+      "to": "registry",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "mlflow"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "lifecycle",
+      "to": "monitoring",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "mlflow",
+        "nist"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "lifecycle",
+      "to": "deployment",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "mlflow",
+        "vllm"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "trust",
+      "to": "evaluation",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "metrics",
+        "nist"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "evaluation",
+      "to": "validation",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "sk",
+        "metrics"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "evaluation",
+      "to": "precision",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "metrics"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "evaluation",
+      "to": "calibration",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "sk",
+        "metrics"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "evaluation",
+      "to": "geneval",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "nist",
+        "mlflow"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "evaluation",
+      "to": "rageval",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "rag",
+        "nist"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "trust",
+      "to": "security",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "owasp",
+        "nist"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "security",
+      "to": "injection",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "owasp"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "security",
+      "to": "hallucination",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "nist",
+        "owasp"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "security",
+      "to": "poisoning",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "owasp"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "security",
+      "to": "redteam",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "owasp",
+        "nist"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "security",
+      "to": "guardrails",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "owasp",
+        "mcp"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "trust",
+      "to": "governance",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "nist"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "governance",
+      "to": "fairness",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "nist"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "governance",
+      "to": "explain",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "nist",
+        "sk"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "governance",
+      "to": "human",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "nist"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "governance",
+      "to": "privacy",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "nist",
+        "owasp"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "governance",
+      "to": "airmf",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "nist"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "paradigms",
+      "to": "federated",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "federated"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "neural",
+      "to": "ssm",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "ssm"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "foundation",
+      "to": "vae",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "vae"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "ml",
+      "to": "recommendation",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "rec"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "recommendation",
+      "to": "recsys",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "rec"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "recommendation",
+      "to": "collaborative",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "rec"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "frameworks",
+      "to": "torchrec",
+      "type": "hierarchy",
+      "note": "Classement pédagogique principal. D’autres appartenances sont possibles.",
+      "sources": [
+        "rec"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "federated",
+      "to": "neural",
+      "type": "uses",
+      "note": "Les participants peuvent entraîner des composants neuronaux locaux.",
+      "sources": [
+        "federated"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "ssm",
+      "to": "llm",
+      "type": "enables",
+      "note": "Les espaces d’état sont une autre base possible pour la modélisation du langage.",
+      "sources": [
+        "ssm"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "vae",
+      "to": "embedding",
+      "type": "enables",
+      "note": "L’encodeur apprend une représentation latente probabiliste.",
+      "sources": [
+        "vae"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "recsys",
+      "to": "embedding",
+      "type": "uses",
+      "note": "Les représentations apprises aident à estimer la pertinence.",
+      "sources": [
+        "rec"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "torchrec",
+      "to": "recsys",
+      "type": "enables",
+      "note": "La bibliothèque fournit les composants de modèles de recommandation.",
+      "sources": [
+        "rec"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "privacy",
+      "to": "federated",
+      "type": "controls",
+      "note": "Les données décentralisées nécessitent toujours des contrôles de confidentialité.",
+      "sources": [
+        "federated",
+        "nist"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "dl",
+      "to": "ml",
+      "type": "enables",
+      "note": "Les réseaux profonds sont des méthodes d’apprentissage automatique.",
+      "sources": [
+        "torch",
+        "sk"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "gen",
+      "to": "dl",
+      "type": "uses",
+      "note": "De nombreuses familles génératives modernes mobilisent des réseaux profonds.",
+      "sources": [
+        "hf",
+        "diffusion"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "nlp",
+      "to": "ml",
+      "type": "uses",
+      "note": "Les tâches linguistiques peuvent être apprises à partir de données.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "vision",
+      "to": "dl",
+      "type": "uses",
+      "note": "Les réseaux profonds soutiennent de nombreuses tâches de vision.",
+      "sources": [
+        "hf",
+        "torch"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "neurosymbolic",
+      "to": "logic",
+      "type": "uses",
+      "note": "Les règles peuvent être combinées aux représentations apprises.",
+      "sources": [
+        "ai"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "neurosymbolic",
+      "to": "neural",
+      "type": "uses",
+      "note": "Le composant neuronal apprend des représentations.",
+      "sources": [
+        "torch"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "llm",
+      "to": "transformers",
+      "type": "uses",
+      "note": "De nombreux LLM sont construits sur des Transformers.",
+      "sources": [
+        "hf",
+        "attention"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "llm",
+      "to": "autoregressive",
+      "type": "uses",
+      "note": "Les LLM génératifs courants peuvent prédire successivement les tokens.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "llm",
+      "to": "token",
+      "type": "uses",
+      "note": "La tokenisation fournit des unités d’entrée et de sortie.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "llm",
+      "to": "self",
+      "type": "uses",
+      "note": "Le préentraînement peut utiliser des cibles dérivées du corpus.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "llm",
+      "to": "foundationmodel",
+      "type": "enables",
+      "note": "Un LLM largement préentraîné peut servir de base à plusieurs tâches.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "vlm",
+      "to": "transformers",
+      "type": "uses",
+      "note": "Les architectures vision-langage peuvent mobiliser l’attention.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "vlm",
+      "to": "embedding",
+      "type": "uses",
+      "note": "Les représentations relient contenu visuel et langage.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "contrastive",
+      "to": "embedding",
+      "type": "enables",
+      "note": "L’objectif contraste les représentations correspondantes.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "cnn",
+      "to": "detection",
+      "type": "enables",
+      "note": "Les filtres convolutifs peuvent servir de socle à la détection.",
+      "sources": [
+        "torch"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "cnn",
+      "to": "segmentation",
+      "type": "enables",
+      "note": "Les représentations spatiales soutiennent la segmentation.",
+      "sources": [
+        "torch"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "ocr",
+      "to": "rag",
+      "type": "enables",
+      "note": "L’extraction rend les documents numérisés accessibles à la recherche.",
+      "sources": [
+        "hf",
+        "rag"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "asr",
+      "to": "summarize",
+      "type": "enables",
+      "note": "Une transcription peut être donnée à un système de synthèse.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "embedding",
+      "to": "vector",
+      "type": "enables",
+      "note": "Les vecteurs appris peuvent être indexés par similarité.",
+      "sources": [
+        "rag"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "rag",
+      "to": "llm",
+      "type": "uses",
+      "note": "Le générateur exploite un contexte documentaire retrouvé.",
+      "sources": [
+        "rag"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "rag",
+      "to": "retrieval",
+      "type": "uses",
+      "note": "Le système récupère des informations pertinentes.",
+      "sources": [
+        "rag"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "rag",
+      "to": "vector",
+      "type": "uses",
+      "note": "Un index vectoriel constitue un choix possible de recherche.",
+      "sources": [
+        "rag"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "rag",
+      "to": "chunking",
+      "type": "uses",
+      "note": "Des passages peuvent constituer les unités de recherche.",
+      "sources": [
+        "rag"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "rag",
+      "to": "reranking",
+      "type": "uses",
+      "note": "Un réordonnancement peut affiner les candidats.",
+      "sources": [
+        "rag"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "rag",
+      "to": "hybrid",
+      "type": "uses",
+      "note": "La recherche peut combiner plusieurs signaux de pertinence.",
+      "sources": [
+        "rag"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "kg",
+      "to": "ontology",
+      "type": "uses",
+      "note": "Une ontologie peut fournir un vocabulaire et une sémantique.",
+      "sources": [
+        "ai",
+        "rdf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "kg",
+      "to": "rdf",
+      "type": "uses",
+      "note": "RDF est une représentation possible de graphes de connaissances.",
+      "sources": [
+        "rdf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "kg",
+      "to": "bayes",
+      "type": "enables",
+      "note": "La connaissance structurée peut alimenter des modèles probabilistes distincts.",
+      "sources": [
+        "ai"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "gnn",
+      "to": "kg",
+      "type": "uses",
+      "note": "Un graphe de connaissances peut fournir une structure relationnelle.",
+      "sources": [
+        "ai",
+        "torch"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "agentarch",
+      "to": "llm",
+      "type": "uses",
+      "note": "Certains agents utilisent un modèle de langage pour proposer des actions.",
+      "sources": [
+        "mcp"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "agentarch",
+      "to": "rag",
+      "type": "uses",
+      "note": "Un agent documentaire peut rechercher un contexte externe.",
+      "sources": [
+        "rag",
+        "mcp"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "agentplanning",
+      "to": "planning",
+      "type": "uses",
+      "note": "La planification formelle est une option d’architecture.",
+      "sources": [
+        "ai"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "tooluse",
+      "to": "mcp",
+      "type": "uses",
+      "note": "MCP standardise une voie de connexion à des outils.",
+      "sources": [
+        "mcp"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "memory",
+      "to": "kg",
+      "type": "uses",
+      "note": "Un graphe peut représenter une mémoire structurée.",
+      "sources": [
+        "ai",
+        "rdf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "multiagent",
+      "to": "agentplanning",
+      "type": "uses",
+      "note": "Les rôles et plans doivent être coordonnés.",
+      "sources": [
+        "ai"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "robotics",
+      "to": "rl",
+      "type": "uses",
+      "note": "Le renforcement peut apprendre une politique de contrôle.",
+      "sources": [
+        "rl"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "robotics",
+      "to": "vision",
+      "type": "uses",
+      "note": "La perception visuelle peut informer une action physique.",
+      "sources": [
+        "ai",
+        "torch"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "slam",
+      "to": "perception",
+      "type": "uses",
+      "note": "Les observations visuelles peuvent soutenir la localisation.",
+      "sources": [
+        "ai"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "rlhf",
+      "to": "rl",
+      "type": "uses",
+      "note": "Le comportement est ajusté via une optimisation par renforcement.",
+      "sources": [
+        "rl",
+        "dpo"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "rlhf",
+      "to": "llm",
+      "type": "enables",
+      "note": "L’alignement par préférences peut ajuster un modèle de langage.",
+      "sources": [
+        "dpo"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "dpo",
+      "to": "llm",
+      "type": "enables",
+      "note": "L’optimisation de préférences ajuste directement le modèle.",
+      "sources": [
+        "dpo"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "finetune",
+      "to": "transfer",
+      "type": "uses",
+      "note": "Le modèle réutilise des paramètres préappris.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "finetune",
+      "to": "lora",
+      "type": "uses",
+      "note": "LoRA est une option d’adaptation à faible nombre de paramètres.",
+      "sources": [
+        "lora"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "finetune",
+      "to": "labeling",
+      "type": "uses",
+      "note": "Les exemples ciblés requièrent une préparation cohérente.",
+      "sources": [
+        "hf",
+        "nist"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "prompt",
+      "to": "llm",
+      "type": "enables",
+      "note": "Les instructions guident les comportements attendus.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "diffusion",
+      "to": "neural",
+      "type": "uses",
+      "note": "Un réseau apprend un processus de débruitage.",
+      "sources": [
+        "diffusion"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "gan",
+      "to": "backprop",
+      "type": "uses",
+      "note": "Les composants neuronaux peuvent être entraînés par gradients.",
+      "sources": [
+        "gan"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "hfdiffusers",
+      "to": "diffusion",
+      "type": "enables",
+      "note": "La bibliothèque fournit des pipelines de diffusion.",
+      "sources": [
+        "diffusers"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "hftransformers",
+      "to": "llm",
+      "type": "enables",
+      "note": "La bibliothèque fournit des définitions et outils pour des LLM.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "hftransformers",
+      "to": "vlm",
+      "type": "enables",
+      "note": "Les modèles vision-langage sont une famille prise en charge.",
+      "sources": [
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "pytorch",
+      "to": "backprop",
+      "type": "enables",
+      "note": "La différentiation automatique calcule les gradients.",
+      "sources": [
+        "torch"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "sklearn",
+      "to": "supervised",
+      "type": "enables",
+      "note": "La bibliothèque implémente de nombreux estimateurs supervisés.",
+      "sources": [
+        "sk"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "sklearn",
+      "to": "clustering",
+      "type": "enables",
+      "note": "Des algorithmes de regroupement sont fournis.",
+      "sources": [
+        "cluster"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "mlflow",
+      "to": "experiments",
+      "type": "enables",
+      "note": "La plateforme suit des expériences et leurs artefacts.",
+      "sources": [
+        "mlflow"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "mlflow",
+      "to": "registry",
+      "type": "enables",
+      "note": "Le registre organise les versions des modèles.",
+      "sources": [
+        "mlflow"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "vllm",
+      "to": "llm",
+      "type": "enables",
+      "note": "Le moteur sert des modèles de langage.",
+      "sources": [
+        "vllm"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "vllm",
+      "to": "quantization",
+      "type": "uses",
+      "note": "Des formats quantifiés peuvent réduire les besoins de mémoire.",
+      "sources": [
+        "vllm"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "quantization",
+      "to": "edge",
+      "type": "enables",
+      "note": "Une précision réduite peut faciliter le déploiement local.",
+      "sources": [
+        "torch",
+        "hf"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "distillation",
+      "to": "edge",
+      "type": "enables",
+      "note": "Un modèle compact peut rendre une exécution embarquée possible.",
+      "sources": [
+        "torch"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "accelerator",
+      "to": "training",
+      "type": "enables",
+      "note": "Le calcul parallèle peut accélérer l’entraînement.",
+      "sources": [
+        "torch"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "features",
+      "to": "supervised",
+      "type": "enables",
+      "note": "Des variables pertinentes soutiennent les modèles supervisés.",
+      "sources": [
+        "sk"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "pipeline",
+      "to": "validation",
+      "type": "enables",
+      "note": "Des transformations séparées correctement évitent des fuites.",
+      "sources": [
+        "sk"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "provenance",
+      "to": "registry",
+      "type": "enables",
+      "note": "L’origine des données participe à la traçabilité des versions.",
+      "sources": [
+        "mlflow",
+        "nist"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "monitoring",
+      "to": "deployment",
+      "type": "evaluates",
+      "note": "La surveillance examine le comportement en production.",
+      "sources": [
+        "mlflow",
+        "nist"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "validation",
+      "to": "supervised",
+      "type": "evaluates",
+      "note": "Des données séparées évaluent la généralisation.",
+      "sources": [
+        "metrics",
+        "sk"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "precision",
+      "to": "classification",
+      "type": "evaluates",
+      "note": "Ces métriques examinent les erreurs de classification.",
+      "sources": [
+        "metrics"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "calibration",
+      "to": "classification",
+      "type": "evaluates",
+      "note": "L’évaluation compare probabilités et observations.",
+      "sources": [
+        "sk",
+        "metrics"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "geneval",
+      "to": "llm",
+      "type": "evaluates",
+      "note": "Les scénarios testent qualité et défaillances du modèle.",
+      "sources": [
+        "nist"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "rageval",
+      "to": "rag",
+      "type": "evaluates",
+      "note": "Recherche et réponse doivent être évaluées distinctement.",
+      "sources": [
+        "rag",
+        "nist"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "redteam",
+      "to": "agentarch",
+      "type": "evaluates",
+      "note": "Les scénarios adverses explorent les actions et permissions.",
+      "sources": [
+        "owasp"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "redteam",
+      "to": "llm",
+      "type": "evaluates",
+      "note": "Les tests cherchent des comportements indésirables.",
+      "sources": [
+        "owasp"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "guardrails",
+      "to": "tooluse",
+      "type": "controls",
+      "note": "Valider les opérations et appliquer les permissions.",
+      "sources": [
+        "owasp",
+        "mcp"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "guardrails",
+      "to": "injection",
+      "type": "controls",
+      "note": "Des défenses applicatives peuvent réduire certains effets.",
+      "sources": [
+        "owasp"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "human",
+      "to": "agents",
+      "type": "controls",
+      "note": "Un humain peut examiner ou autoriser des étapes critiques.",
+      "sources": [
+        "nist"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "privacy",
+      "to": "rag",
+      "type": "controls",
+      "note": "Filtrer les informations selon les droits du demandeur.",
+      "sources": [
+        "owasp",
+        "nist"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "privacy",
+      "to": "memory",
+      "type": "controls",
+      "note": "Borner l’accès et la conservation des informations.",
+      "sources": [
+        "nist"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "airmf",
+      "to": "governance",
+      "type": "enables",
+      "note": "Les quatre fonctions structurent la gestion des risques.",
+      "sources": [
+        "nist"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "fairness",
+      "to": "classification",
+      "type": "evaluates",
+      "note": "Comparer les performances et impacts pertinents.",
+      "sources": [
+        "nist"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "explain",
+      "to": "trees",
+      "type": "evaluates",
+      "note": "La structure d’un arbre peut être examinée directement.",
+      "sources": [
+        "sk"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "hallucination",
+      "to": "llm",
+      "type": "risk",
+      "note": "Les modèles génératifs peuvent produire ce type de défaillance.",
+      "sources": [
+        "nist"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "injection",
+      "to": "tooluse",
+      "type": "risk",
+      "note": "Un détournement peut viser les opérations d’un agent.",
+      "sources": [
+        "owasp"
+      ],
+      "editorial": true
+    },
+    {
+      "from": "poisoning",
+      "to": "dataprep",
+      "type": "risk",
+      "note": "Les sources de données constituent une surface d’attaque.",
+      "sources": [
+        "owasp"
+      ],
+      "editorial": true
+    }
+  ],
+  "relationTypes": {
+    "hierarchy": {
+      "label": "Contient",
+      "color": "#a9a6af",
+      "dash": "",
+      "description": "Classement pédagogique, du parent vers l’enfant."
+    },
+    "uses": {
+      "label": "Utilise",
+      "color": "#8b68b5",
+      "dash": "",
+      "description": "Peut mobiliser cette méthode ou technologie."
+    },
+    "enables": {
+      "label": "Soutient",
+      "color": "#5a8b74",
+      "dash": "",
+      "description": "Contribue à une capacité, sans la garantir."
+    },
+    "evaluates": {
+      "label": "Évalue",
+      "color": "#b88756",
+      "dash": "5 4",
+      "description": "Mesure ou examine ce système ou concept."
+    },
+    "controls": {
+      "label": "Encadre",
+      "color": "#bb7976",
+      "dash": "3 4",
+      "description": "Contrôle ou atténue un risque associé."
+    },
+    "risk": {
+      "label": "Menace",
+      "color": "#bb7976",
+      "dash": "2 5",
+      "description": "Défaillance ou attaque pouvant affecter ce système."
+    }
+  },
+  "sources": {
+    "ai": {
+      "id": "ai",
+      "publisher": "Poole & Mackworth",
+      "title": "Fondements de l’IA et architectures d’agents",
+      "url": "https://artint.info/3e/html/ArtInt3e.html",
+      "type": "Ouvrage académique, 2023",
+      "checked": "2026-09-15"
+    },
+    "sk": {
+      "id": "sk",
+      "publisher": "scikit-learn",
+      "title": "Guide de l’apprentissage automatique",
+      "url": "https://scikit-learn.org/stable/user_guide.html",
+      "type": "Documentation officielle",
+      "checked": "2026-09-15"
+    },
+    "ensemble": {
+      "id": "ensemble",
+      "publisher": "scikit-learn",
+      "title": "Méthodes d’ensemble",
+      "url": "https://scikit-learn.org/stable/modules/ensemble.html",
+      "type": "Documentation officielle",
+      "checked": "2026-09-15"
+    },
+    "cluster": {
+      "id": "cluster",
+      "publisher": "scikit-learn",
+      "title": "Clustering",
+      "url": "https://scikit-learn.org/stable/modules/clustering.html",
+      "type": "Documentation officielle",
+      "checked": "2026-09-15"
+    },
+    "metrics": {
+      "id": "metrics",
+      "publisher": "scikit-learn",
+      "title": "Mesures et évaluation",
+      "url": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+      "type": "Documentation officielle",
+      "checked": "2026-09-15"
+    },
+    "torch": {
+      "id": "torch",
+      "publisher": "PyTorch",
+      "title": "Tenseurs, réseaux et entraînement",
+      "url": "https://docs.pytorch.org/tutorials/beginner/basics/intro.html",
+      "type": "Documentation officielle",
+      "checked": "2026-09-15"
+    },
+    "hf": {
+      "id": "hf",
+      "publisher": "Hugging Face",
+      "title": "Transformers : texte, vision et audio",
+      "url": "https://huggingface.co/docs/transformers/index",
+      "type": "Documentation officielle",
+      "checked": "2026-09-15"
+    },
+    "diffusers": {
+      "id": "diffusers",
+      "publisher": "Hugging Face",
+      "title": "Diffusers : génération multimédia",
+      "url": "https://huggingface.co/docs/diffusers/index",
+      "type": "Documentation officielle",
+      "checked": "2026-09-15"
+    },
+    "attention": {
+      "id": "attention",
+      "publisher": "Vaswani et al.",
+      "title": "Attention Is All You Need",
+      "url": "https://arxiv.org/abs/1706.03762",
+      "type": "Article de recherche, 2017",
+      "checked": "2026-09-15"
+    },
+    "rag": {
+      "id": "rag",
+      "publisher": "Lewis et al.",
+      "title": "Retrieval-Augmented Generation",
+      "url": "https://arxiv.org/abs/2005.11401",
+      "type": "Article de recherche, 2020",
+      "checked": "2026-09-15"
+    },
+    "rl": {
+      "id": "rl",
+      "publisher": "Spinning Up",
+      "title": "Concepts de l’apprentissage par renforcement",
+      "url": "https://spinningup.openai.com/en/latest/spinningup/rl_intro.html",
+      "type": "Documentation de recherche",
+      "checked": "2026-09-15"
+    },
+    "lora": {
+      "id": "lora",
+      "publisher": "Hu et al.",
+      "title": "LoRA : adaptation de faible rang",
+      "url": "https://arxiv.org/abs/2106.09685",
+      "type": "Article de recherche, 2021",
+      "checked": "2026-09-15"
+    },
+    "dpo": {
+      "id": "dpo",
+      "publisher": "Rafailov et al.",
+      "title": "Direct Preference Optimization",
+      "url": "https://arxiv.org/abs/2305.18290",
+      "type": "Article de recherche, 2023",
+      "checked": "2026-09-15"
+    },
+    "diffusion": {
+      "id": "diffusion",
+      "publisher": "Ho et al.",
+      "title": "Denoising Diffusion Probabilistic Models",
+      "url": "https://arxiv.org/abs/2006.11239",
+      "type": "Article de recherche, 2020",
+      "checked": "2026-09-15"
+    },
+    "gan": {
+      "id": "gan",
+      "publisher": "Goodfellow et al.",
+      "title": "Generative Adversarial Networks",
+      "url": "https://arxiv.org/abs/1406.2661",
+      "type": "Article de recherche, 2014",
+      "checked": "2026-09-15"
+    },
+    "rdf": {
+      "id": "rdf",
+      "publisher": "W3C",
+      "title": "RDF : graphes et triplets",
+      "url": "https://www.w3.org/TR/rdf11-concepts/",
+      "type": "Recommandation technique",
+      "checked": "2026-09-15"
+    },
+    "mlflow": {
+      "id": "mlflow",
+      "publisher": "MLflow",
+      "title": "Plateforme d’ingénierie et cycle de vie IA",
+      "url": "https://mlflow.org/docs/latest/ml/",
+      "type": "Documentation officielle",
+      "checked": "2026-09-15"
+    },
+    "mcp": {
+      "id": "mcp",
+      "publisher": "Model Context Protocol",
+      "title": "Protocole de connexion aux outils et données",
+      "url": "https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro",
+      "type": "Documentation officielle",
+      "checked": "2026-09-15"
+    },
+    "owasp": {
+      "id": "owasp",
+      "publisher": "OWASP",
+      "title": "Risques de sécurité des applications LLM",
+      "url": "https://genai.owasp.org/llm-top-10/",
+      "type": "Référentiel de sécurité",
+      "checked": "2026-09-15"
+    },
+    "nist": {
+      "id": "nist",
+      "publisher": "NIST",
+      "title": "AI Risk Management Framework",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "type": "Cadre volontaire de gestion des risques",
+      "checked": "2026-09-15"
+    },
+    "pyg": {
+      "id": "pyg",
+      "publisher": "PyTorch Geometric",
+      "title": "Apprentissage sur graphes",
+      "url": "https://pytorch-geometric.readthedocs.io/en/latest/get_started/introduction.html",
+      "type": "Documentation officielle",
+      "checked": "2026-09-15"
+    },
+    "quant": {
+      "id": "quant",
+      "publisher": "Hugging Face",
+      "title": "Quantification des modèles",
+      "url": "https://huggingface.co/docs/transformers/en/quantization/overview",
+      "type": "Documentation officielle",
+      "checked": "2026-09-15"
+    },
+    "clip": {
+      "id": "clip",
+      "publisher": "Radford et al.",
+      "title": "Apprentissage contrastif vision-langage",
+      "url": "https://arxiv.org/abs/2103.00020",
+      "type": "Article de recherche, 2021",
+      "checked": "2026-09-15"
+    },
+    "vae": {
+      "id": "vae",
+      "publisher": "Kingma & Welling",
+      "title": "Auto-Encoding Variational Bayes",
+      "url": "https://arxiv.org/abs/1312.6114",
+      "type": "Article de recherche, 2013",
+      "checked": "2026-09-15"
+    },
+    "ssm": {
+      "id": "ssm",
+      "publisher": "Gu & Dao",
+      "title": "Mamba et espaces d’état sélectifs",
+      "url": "https://arxiv.org/abs/2312.00752",
+      "type": "Article de recherche, 2023",
+      "checked": "2026-09-15"
+    },
+    "federated": {
+      "id": "federated",
+      "publisher": "McMahan et al.",
+      "title": "Apprentissage sur données décentralisées",
+      "url": "https://arxiv.org/abs/1602.05629",
+      "type": "Article de recherche, 2016",
+      "checked": "2026-09-15"
+    },
+    "rec": {
+      "id": "rec",
+      "publisher": "PyTorch",
+      "title": "Systèmes de recommandation et embeddings",
+      "url": "https://docs.pytorch.org/tutorials/intermediate/torchrec_intro_tutorial.html",
+      "type": "Documentation officielle",
+      "checked": "2026-09-15"
+    },
+    "vllm": {
+      "id": "vllm",
+      "publisher": "vLLM",
+      "title": "Moteur de service et d’inférence LLM",
+      "url": "https://docs.vllm.ai/en/latest/",
+      "type": "Documentation officielle",
+      "checked": "2026-09-15"
+    }
+  },
+  "methodology": "Synthèses originales. Hiérarchie et liens : interprétation pédagogique, étayée par les références affichées. Les liens « Utilise » désignent une possibilité, pas une dépendance universelle. Les exemples de technologies dans les synonymes ne sont pas des recommandations de produits."
+}
